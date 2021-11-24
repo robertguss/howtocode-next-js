@@ -1,5 +1,6 @@
 import Head from "next/head"
 import Header from "../components/Header"
+import Footer from "../components/Footer/Footer"
 import { getAllPosts } from "../utils/mdxUtils"
 import PreviewCard from "../components/Posts/PreviewCard"
 
@@ -23,14 +24,22 @@ export default function Home({ allPosts }) {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8"
             data-test="articles-section"
           >
-            {allPosts.slice(0, 6).map((p, index) => (
+            {allPosts.slice(0, 6).map((post, index) => (
               <div className="col-span-1" key={index}>
-                <PreviewCard post={p} />
+                <PreviewCard post={post} />
               </div>
             ))}
           </section>
         </article>
       </main>
+
+      <section className="flex space-x-8 justify-center text-xl pt-8 font-bold">
+        <a href="/posts" className="mr-8" data-test="see-all-link">
+          See All<span className="squiggle">&rarr;</span>
+        </a>
+      </section>
+
+      <Footer />
     </>
   )
 }
