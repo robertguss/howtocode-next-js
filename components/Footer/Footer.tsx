@@ -8,8 +8,7 @@ export default function Footer() {
       <footer className="py-6 lg:py-12 text-center">
         <div className="text-sm" data-test="footer-text">
           &copy;
-          {new Date().getFullYear()}
-          How To Code
+          {new Date().getFullYear()} How To Code &amp; Robert Guss
         </div>
         <Social />
       </footer>
