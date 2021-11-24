@@ -8,16 +8,15 @@ import PageHeader from "@/components/PageHeader"
 
 let title = "How To Code"
 let description = "Tutorials for Web Developers"
+let seoDescription =
+  "How to Code focuses on teaching web development through articles, books, courses and tutorials."
 
 export default function Home({ allPosts }) {
   return (
     <>
       <Head>
-        <title>How To Code</title>
-        <meta
-          name="description"
-          content="How to Code focuses on teaching web development through articles, books, courses and tutorials."
-        />
+        <title>{title}</title>
+        <meta name="description" content={seoDescription} />
       </Head>
 
       <Header />
