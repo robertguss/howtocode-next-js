@@ -1,62 +1,128 @@
-/* This example requires Tailwind CSS v2.0+ */
-const navigation = [
-  { name: "Solutions", href: "#" },
-  { name: "Pricing", href: "#" },
-  { name: "Docs", href: "#" },
-  { name: "Company", href: "#" },
-]
+import Link from "next/link"
 
-export default function Example() {
+export default function Header() {
   return (
-    <header className="bg-indigo-600" data-test="header">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
+    <header className="bg-blue-600">
+      <nav
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        aria-label="Top"
+        data-test="navigation"
+      >
         <div className="w-full py-6 flex items-center justify-between border-b border-indigo-500 lg:border-none">
           <div className="flex items-center">
-            <a href="#">
-              <span className="sr-only">Workflow</span>
-              <img
-                className="h-10 w-auto"
-                src="https://tailwindui.com/img/logos/workflow-mark.svg?color=white"
-                alt=""
-              />
-            </a>
-            <div className="hidden ml-10 space-x-8 lg:block">
-              {navigation.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-base font-medium text-white hover:text-indigo-50"
+            <Link href="/">
+              <a>
+                <span className="sr-only">Workflow</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="#ffffff"
                 >
-                  {link.name}
-                </a>
-              ))}
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                  />
+                </svg>
+              </a>
+            </Link>
+
+            <div className="hidden ml-10 space-x-8 lg:block">
+              <a
+                href="/books"
+                className="text-base font-medium text-white hover:text-indigo-50"
+                key="Free Books"
+                data-test="link-free-books"
+              >
+                Free Books
+              </a>
+
+              <a
+                href="/posts"
+                className="text-base font-medium text-white hover:text-indigo-50"
+                key="Articles"
+                data-test="link-articles"
+              >
+                Articles
+              </a>
+
+              <a
+                href="/courses"
+                className="text-base font-medium text-white hover:text-indigo-50"
+                key="Courses"
+                data-test="link-courses"
+              >
+                Courses
+              </a>
+
+              <a
+                href="/tutorials"
+                className="text-base font-medium text-white hover:text-indigo-50"
+                key="Tutorials"
+                data-test="link-tutorials"
+              >
+                Tutorials
+              </a>
             </div>
           </div>
-          <div className="ml-10 space-x-4">
+          <div className="">
             <a
-              href="#"
-              className="inline-block bg-indigo-500 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75"
+              href="/search"
+              className="py-2 px-4 border border-transparent rounded-md text-base font-medium text-white"
+              data-test="link-search"
             >
-              Sign in
-            </a>
-            <a
-              href="#"
-              className="inline-block bg-white py-2 px-4 border border-transparent rounded-md text-base font-medium text-indigo-600 hover:bg-indigo-50"
-            >
-              Sign up
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
             </a>
           </div>
         </div>
         <div className="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
-          {navigation.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-base font-medium text-white hover:text-indigo-50"
-            >
-              {link.name}
-            </a>
-          ))}
+          <a
+            href="/books"
+            className="text-base font-medium text-white hover:text-indigo-50"
+            key="Solutions"
+          >
+            Free Books
+          </a>
+
+          <a
+            href="/posts"
+            className="text-base font-medium text-white hover:text-indigo-50"
+            key="Pricing"
+          >
+            Articles
+          </a>
+
+          <a
+            href="/courses"
+            className="text-base font-medium text-white hover:text-indigo-50"
+            key="Docs"
+          >
+            Courses
+          </a>
+
+          <a
+            href="/tutorials"
+            className="text-base font-medium text-white hover:text-indigo-50"
+            key="Company"
+          >
+            Tutorials
+          </a>
         </div>
       </nav>
     </header>

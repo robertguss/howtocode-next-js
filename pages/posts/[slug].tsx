@@ -70,7 +70,7 @@ export const getStaticPaths = async () => {
     // Remove file extensions for page paths
     .map((path) => path.replace(/\.md?$/, ""))
     // remove forward slash from beginning of paths
-    .map((path) => path.replace(/\//, ""))
+    .map((path) => path.replace("/", ""))
     // Map the path into the static paths object required by Next.js
     .map((slug) => {
       return { params: { slug } }
