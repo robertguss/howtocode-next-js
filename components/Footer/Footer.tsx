@@ -1,4 +1,3 @@
-import Script from "next/script"
 import Squiggle from "./Squiggle"
 import Social from "./Social"
 
@@ -14,11 +13,6 @@ export default function Footer() {
       </footer>
 
       <Squiggle />
-
-      <Script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></Script>
-      <Script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/toolbar/prism-toolbar.min.js"></Script>
-      <Script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></Script>
-      <Script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js"></Script>
     </>
   )
 }

@@ -1,11 +1,17 @@
+import Head from "next/head"
 import { MDXRemote } from "next-mdx-remote"
 import Script from "next/script"
 import Toc from "./Toc"
 
 export default function LessonLayout({ toc, source, components }) {
-  console.log(source)
   return (
     <>
+      <Head>
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-tomorrow.min.css"
+          rel="stylesheet"
+        />
+      </Head>
       <div className="min-h-screen mt-20">
         <div className="py-6">
           <div className="max-w-3xl mx-auto sm:px-6 lg:max-w-full lg:px-8 lg:grid lg:grid-cols-12 lg:gap-8">
