@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Image from "next/image"
 import { MDXRemote } from "next-mdx-remote"
 import Script from "next/script"
 import Toc from "./Toc"
@@ -32,11 +33,27 @@ export default function LessonLayout({ toc, source, components }) {
                       <h1>{source.scope.title}</h1>
                     </header>
                     {source.scope.hero && (
-                      <img
+                      <Image
                         className="rounded-xl mx-auto"
                         src={source.scope.hero}
                         alt={`${source.scope.title} Hero Image`}
+                        width={700}
+                        height={400}
                       />
+                    )}
+
+                    {source.scope.youtube && (
+                      <div className="embed-responsive aspect-ratio-16/9 mt-6 lg:mt-12">
+                        <iframe
+                          width="700"
+                          height="500"
+                          className="embed-responsive-item"
+                          src={`https://www.youtube.com/embed/${source.scope.youtube}`}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; encrypted-media; gyroscope;"
+                          allowFullScreen
+                        ></iframe>
+                      </div>
                     )}
                     <MDXRemote {...source} components={components} />
                   </div>

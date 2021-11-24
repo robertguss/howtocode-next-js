@@ -9,7 +9,7 @@ tags: ["understanding-the-jamstack"]
 layout: "../../layouts/BlogPostLayout.astro"
 ---
 
-**\*This project builds on top of the [Gatsby E-commerce Tutorial](https://www.gatsbyjs.com/tutorial/ecommerce-tutorial) provided in the official Gatsby docs, and the [Use Shopping Cart Example repo](https://github.com/dayhaysoos/use-shopping-cart/tree/master/examples/gatsby).**\_
+> This project builds on top of the [Gatsby E-commerce Tutorial](https://www.gatsbyjs.com/tutorial/ecommerce-tutorial) provided in the official Gatsby docs, and the [Use Shopping Cart Example repo](https://github.com/dayhaysoos/use-shopping-cart/tree/master/examples/gatsby).
 
 In this project, we will be creating a simple e-commerce web site with Gatbsy and Stripe checkout. Stripe checkout is client-side checkout that allows us to integrate a complete checkout experience without a backend.
 
@@ -104,7 +104,7 @@ module.exports = {
       },
     },
   ],
-};
+}
 ```
 
 Head back over to the Stripe dashboard and click on "Developers" and then "API keys" on the left-hand side.
@@ -211,17 +211,17 @@ Create a new file in `src/utils/stripejs.js` and add the following.
 _**you will need to create the `utils` folder as well**_
 
 ```js
-import { loadStripe } from "@stripe/stripe-js";
+import { loadStripe } from "@stripe/stripe-js"
 
-let stripePromise;
+let stripePromise
 const getStripe = () => {
   if (!stripePromise) {
-    stripePromise = loadStripe(process.env.GATSBY_STRIPE_PUBLISHABLE_KEY);
+    stripePromise = loadStripe(process.env.GATSBY_STRIPE_PUBLISHABLE_KEY)
   }
-  return stripePromise;
-};
+  return stripePromise
+}
 
-export default getStripe;
+export default getStripe
 ```
 
 ## Adding a shopping cart
@@ -247,18 +247,18 @@ _**The following code comes from the [Use Shopping Cart Example Gatsby Repo](htt
 Withing `/pages/index.js`, add the following.
 
 ```js
-import React from "react";
+import React from "react"
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
-import Skus from "../components/Products/Skus";
-import CartOverview from "../components/CartOverview";
+import Skus from "../components/Products/Skus"
+import CartOverview from "../components/CartOverview"
 
-import { loadStripe } from "@stripe/stripe-js";
-import { CartProvider } from "use-shopping-cart";
+import { loadStripe } from "@stripe/stripe-js"
+import { CartProvider } from "use-shopping-cart"
 
-const stripePromise = loadStripe(process.env.GATSBY_STRIPE_PUBLISHABLE_KEY);
+const stripePromise = loadStripe(process.env.GATSBY_STRIPE_PUBLISHABLE_KEY)
 
 const CartExample = () => (
   <Layout>
@@ -281,9 +281,9 @@ const CartExample = () => (
       <Skus />
     </CartProvider>
   </Layout>
-);
+)
 
-export default CartExample;
+export default CartExample
 ```
 
 #### Index Page Breakdown
@@ -309,9 +309,9 @@ Create a new folder called `Products` inside the `src/components folder` and cre
 
 ```js
 // src/components/Products/Skus.js
-import React from "react";
-import { graphql, StaticQuery } from "gatsby";
-import SkuCard from "./SkuCard";
+import React from "react"
+import { graphql, StaticQuery } from "gatsby"
+import SkuCard from "./SkuCard"
 
 const conatinerStyles = {
   display: "flex",
@@ -319,7 +319,7 @@ const conatinerStyles = {
   flexWrap: "wrap",
   justifyContent: "space-between",
   padding: "1rem 0 1rem 0",
-};
+}
 
 export default (props) => (
   <StaticQuery
@@ -354,13 +354,13 @@ export default (props) => (
             price: price.unit_amount,
             currency: price.currency,
             image: price.product.images,
-          };
-          return <SkuCard key={price.id} sku={newSku} />;
+          }
+          return <SkuCard key={price.id} sku={newSku} />
         })}
       </div>
     )}
   />
-);
+)
 ```
 
 #### Skus Component Brekdown
@@ -415,9 +415,9 @@ Create a new file called `SkuCard.js` in the `src/components/Products` folder.
 
 ```js
 // src/components/Products/SkuCard.js
-import React from "react";
+import React from "react"
 
-import { useShoppingCart, formatCurrencyString } from "use-shopping-cart";
+import { useShoppingCart, formatCurrencyString } from "use-shopping-cart"
 
 const cardStyles = {
   display: "flex",
@@ -430,7 +430,7 @@ const cardStyles = {
   backgroundColor: "#fff",
   borderRadius: "6px",
   maxWidth: "300px",
-};
+}
 const buttonStyles = {
   fontSize: "13px",
   textAlign: "center",
@@ -441,10 +441,10 @@ const buttonStyles = {
   backgroundColor: "rgb(255, 178, 56)",
   borderRadius: "6px",
   letterSpacing: "1.5px",
-};
+}
 
 const SkuCard = ({ sku }) => {
-  const { addItem } = useShoppingCart();
+  const { addItem } = useShoppingCart()
 
   return (
     <div style={cardStyles}>
@@ -461,10 +461,10 @@ const SkuCard = ({ sku }) => {
         ADD TO CART
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default SkuCard;
+export default SkuCard
 ```
 
 #### Sku Card Component Breakdown
@@ -478,9 +478,9 @@ Lastly, we will create a component for our shopping cart.
 ```js
 // src/components/CartOverview.js
 
-import React, { useState } from "react";
+import React, { useState } from "react"
 
-import { useShoppingCart } from "use-shopping-cart";
+import { useShoppingCart } from "use-shopping-cart"
 
 const buttonStyles = {
   fontSize: "13px",
@@ -492,13 +492,13 @@ const buttonStyles = {
   backgroundColor: "rgb(255, 178, 56)",
   borderRadius: "6px",
   letterSpacing: "1.5px",
-};
+}
 
 const Cart = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false)
   /* Gets the totalPrice and a method for redirecting to stripe */
   const { formattedTotalPrice, redirectToCheckout, cartCount, clearCart } =
-    useShoppingCart();
+    useShoppingCart()
 
   return (
     <div>
@@ -511,8 +511,8 @@ const Cart = () => {
         style={buttonStyles}
         disabled={loading}
         onClick={() => {
-          setLoading(true);
-          redirectToCheckout();
+          setLoading(true)
+          redirectToCheckout()
         }}
       >
         {loading ? "Loading..." : "Checkout"}
@@ -521,10 +521,10 @@ const Cart = () => {
         Clear cart
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default Cart;
+export default Cart
 ```
 
 #### Shopping Cart Component Breakdown
