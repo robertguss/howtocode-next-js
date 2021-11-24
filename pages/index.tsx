@@ -1,17 +1,22 @@
 import Head from "next/head"
+import Link from "next/link"
 import Header from "../components/Header"
 import Footer from "../components/Footer/Footer"
 import { getAllPosts } from "../utils/mdxUtils"
 import PreviewCard from "../components/Posts/PreviewCard"
+import PageHeader from "../components/PageHeader"
+
+let title = "How To Code"
+let description = "Tutorials for Web Developers"
 
 export default function Home({ allPosts }) {
   return (
     <>
       <Head>
-        <title>Next.js Starter Kit</title>
+        <title>How To Code</title>
         <meta
           name="description"
-          content="A Starter Kit for Next.js Applications"
+          content="How to Code focuses on teaching web development through articles, books, courses and tutorials."
         />
       </Head>
 
@@ -19,7 +24,7 @@ export default function Home({ allPosts }) {
 
       <main className="py-12 lg:py-20">
         <article className="max-w-6xl mx-auto px-3">
-          {/* <HomeHeader title={title} description={description} /> */}
+          <PageHeader title={title} description={description} />
           <section
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8"
             data-test="articles-section"
@@ -34,9 +39,11 @@ export default function Home({ allPosts }) {
       </main>
 
       <section className="flex space-x-8 justify-center text-xl pt-8 font-bold">
-        <a href="/posts" className="mr-8" data-test="see-all-link">
-          See All<span className="squiggle">&rarr;</span>
-        </a>
+        <Link href="/posts">
+          <a className="mr-8" data-test="see-all-link">
+            See All<span className="squiggle">&rarr;</span>
+          </a>
+        </Link>
       </section>
 
       <Footer />
