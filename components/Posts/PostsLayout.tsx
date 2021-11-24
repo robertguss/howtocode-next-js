@@ -3,6 +3,7 @@ import Script from "next/script"
 import Toc from "./Toc"
 
 export default function LessonLayout({ toc, source, components }) {
+  console.log(source)
   return (
     <>
       <div className="min-h-screen mt-20">
@@ -21,6 +22,16 @@ export default function LessonLayout({ toc, source, components }) {
               <div className="relative bg-white overflow-hidden">
                 <div className="relative px-4 sm:px-6 lg:px-8">
                   <div className="prose prose-indigo prose-lg text-gray-500 mx-auto">
+                    <header className="mx-auto max-w-3xl text-center content">
+                      <h1>{source.scope.title}</h1>
+                    </header>
+                    {source.scope.hero && (
+                      <img
+                        className="rounded-xl mx-auto"
+                        src={source.scope.hero}
+                        alt={`${source.scope.title} Hero Image`}
+                      />
+                    )}
                     <MDXRemote {...source} components={components} />
                   </div>
                 </div>
