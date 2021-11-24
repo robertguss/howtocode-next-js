@@ -1,1 +1,1 @@
-# Next.js Starter Kit
+# HowToCode.io built with Next.js
