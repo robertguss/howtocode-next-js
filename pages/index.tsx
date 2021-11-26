@@ -1,7 +1,5 @@
 import Head from "next/head"
 import Link from "next/link"
-import Header from "@/components/Header"
-import Footer from "@/components/Footer/Footer"
 import { getAllPosts } from "../utils/mdxUtils"
 import PreviewCard from "@/components/Posts/PreviewCard"
 import PageHeader from "@/components/PageHeader"
@@ -18,8 +16,6 @@ export default function Home({ allPosts }) {
         <title>{title}</title>
         <meta name="description" content={seoDescription} />
       </Head>
-
-      <Header />
 
       <main className="py-12 lg:py-20">
         <article className="max-w-6xl mx-auto px-3">
@@ -44,8 +40,6 @@ export default function Home({ allPosts }) {
           </a>
         </Link>
       </section>
-
-      <Footer />
     </>
   )
 }
