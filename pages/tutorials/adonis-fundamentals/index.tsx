@@ -4,15 +4,15 @@ import { getAllPostsDesc } from "@/utils/mdxUtils"
 import PreviewCard from "@/components/Posts/PreviewCard"
 import PageHeader from "@/components/PageHeader"
 
-let pageTitle = "Elixir Basics"
+let pageTitle = "Adonis Fundamentals"
 let pageDescription = ""
-let seoTitle = "Elixir Basics | How To Code"
+let seoTitle = "Adonis Fundamentals | How To Code"
 let seoDescription =
-  "A tutorial that teaches the basics of the Elixir programming language."
+  "A tutorial that teaches how to build modern web applications using Adonis JS."
 
 export default function Home({ allPosts }) {
   const filteredPosts = allPosts.filter((post) =>
-    post.tags.includes("elixir-basics")
+    post.tags.includes("adonis-fundamentals")
   )
 
   return (

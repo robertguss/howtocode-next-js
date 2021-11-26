@@ -4,15 +4,15 @@ import { getAllPostsDesc } from "@/utils/mdxUtils"
 import PreviewCard from "@/components/Posts/PreviewCard"
 import PageHeader from "@/components/PageHeader"
 
-let pageTitle = "Elixir Basics"
+let pageTitle = "Go Basics"
 let pageDescription = ""
-let seoTitle = "Elixir Basics | How To Code"
+let seoTitle = "Go Basics | How To Code"
 let seoDescription =
-  "A tutorial that teaches the basics of the Elixir programming language."
+  "A tutorial that teaches the basics of the Go programming language."
 
 export default function Home({ allPosts }) {
   const filteredPosts = allPosts.filter((post) =>
-    post.tags.includes("elixir-basics")
+    post.tags.includes("go-basics")
   )
 
   return (

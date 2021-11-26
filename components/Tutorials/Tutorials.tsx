@@ -67,7 +67,7 @@ export default function Tutorials() {
             <a className="transition-all duration-75 ease-in-out h-full block relative top-0 hover:-top-2 shadow-lg hover:shadow-xl bg-white rounded-xl overflow-hidden">
               <Image
                 className="squiggle"
-                src="/images/hero/adonis-js.png"
+                src="/images/hero/Golang-Basics.png"
                 alt=""
                 width={488}
                 height={260}
