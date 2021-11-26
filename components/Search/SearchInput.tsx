@@ -1,7 +1,7 @@
 export default function SearchInput() {
   return (
     <>
-      <section className="max-w-3xl mx-auto px-3">
+      <section className="max-w-3xl mx-auto px-3 py-8">
         <div className="searchBoxContainer">
           <input
             type="text"
