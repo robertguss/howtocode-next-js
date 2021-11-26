@@ -31,98 +31,107 @@ export default function Header() {
             </Link>
 
             <div className="hidden ml-10 space-x-8 lg:block">
-              <a
-                href="/books"
-                className="text-base font-medium text-white hover:text-indigo-50"
-                key="Free Books"
-                data-test="link-free-books"
-              >
-                Free Books
-              </a>
+              <Link href="/books">
+                <a
+                  className="text-base font-medium text-white hover:text-indigo-50"
+                  key="Free Books"
+                  data-test="link-free-books"
+                >
+                  Free Books
+                </a>
+              </Link>
 
-              <a
-                href="/posts"
-                className="text-base font-medium text-white hover:text-indigo-50"
-                key="Articles"
-                data-test="link-articles"
-              >
-                Articles
-              </a>
+              <Link href="/posts">
+                <a
+                  className="text-base font-medium text-white hover:text-indigo-50"
+                  key="Articles"
+                  data-test="link-articles"
+                >
+                  Articles
+                </a>
+              </Link>
 
-              <a
-                href="/courses"
-                className="text-base font-medium text-white hover:text-indigo-50"
-                key="Courses"
-                data-test="link-courses"
-              >
-                Courses
-              </a>
+              <Link href="/courses">
+                <a
+                  className="text-base font-medium text-white hover:text-indigo-50"
+                  key="Courses"
+                  data-test="link-courses"
+                >
+                  Courses
+                </a>
+              </Link>
 
-              <a
-                href="/tutorials"
-                className="text-base font-medium text-white hover:text-indigo-50"
-                key="Tutorials"
-                data-test="link-tutorials"
-              >
-                Tutorials
-              </a>
+              <Link href="/tutorials">
+                <a
+                  className="text-base font-medium text-white hover:text-indigo-50"
+                  key="Tutorials"
+                  data-test="link-tutorials"
+                >
+                  Tutorials
+                </a>
+              </Link>
             </div>
           </div>
           <div className="">
-            <a
-              href="/search"
-              className="py-2 px-4 border border-transparent rounded-md text-base font-medium text-white"
-              data-test="link-search"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+            <Link href="/search">
+              <a
+                className="py-2 px-4 border border-transparent rounded-md text-base font-medium text-white"
+                data-test="link-search"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
-            </a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </a>
+            </Link>
           </div>
         </div>
         <div className="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
-          <a
-            href="/books"
-            className="text-base font-medium text-white hover:text-indigo-50"
-            key="Solutions"
-          >
-            Free Books
-          </a>
+          <Link href="/books">
+            <a
+              className="text-base font-medium text-white hover:text-indigo-50"
+              key="Solutions"
+            >
+              Free Books
+            </a>
+          </Link>
 
-          <a
-            href="/posts"
-            className="text-base font-medium text-white hover:text-indigo-50"
-            key="Pricing"
-          >
-            Articles
-          </a>
+          <Link href="/posts">
+            <a
+              className="text-base font-medium text-white hover:text-indigo-50"
+              key="Pricing"
+            >
+              Articles
+            </a>
+          </Link>
 
-          <a
-            href="/courses"
-            className="text-base font-medium text-white hover:text-indigo-50"
-            key="Docs"
-          >
-            Courses
-          </a>
+          <Link href="/courses">
+            <a
+              className="text-base font-medium text-white hover:text-indigo-50"
+              key="Docs"
+            >
+              Courses
+            </a>
+          </Link>
 
-          <a
-            href="/tutorials"
-            className="text-base font-medium text-white hover:text-indigo-50"
-            key="Company"
-          >
-            Tutorials
-          </a>
+          <Link href="/tutorials">
+            <a
+              className="text-base font-medium text-white hover:text-indigo-50"
+              key="Company"
+            >
+              Tutorials
+            </a>
+          </Link>
         </div>
       </nav>
     </header>
