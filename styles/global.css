@@ -113,3 +113,19 @@
     font-size: clamp(3rem, 6.25vw, 7rem);
   }
 }
+
+/* 
+  Search Page
+*/
+/* #searchBox {
+  border: 2px solid black;
+  border-radius: 5px;
+} */
+
+.searchResultPage {
+  @apply py-5 text-sm;
+}
+
+.searchResultTitle {
+  @apply text-blue-600 text-xl;
+}
