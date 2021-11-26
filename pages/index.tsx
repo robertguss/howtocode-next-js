@@ -1,5 +1,6 @@
 import Head from "next/head"
 import Link from "next/link"
+import Layout from "@/components/Layout"
 import { getAllPosts } from "../utils/mdxUtils"
 import PreviewCard from "@/components/Posts/PreviewCard"
 import PageHeader from "@/components/PageHeader"
@@ -11,7 +12,7 @@ let seoDescription =
 
 export default function Home({ allPosts }) {
   return (
-    <>
+    <Layout>
       <Head>
         <title>{title}</title>
         <meta name="description" content={seoDescription} />
@@ -40,7 +41,7 @@ export default function Home({ allPosts }) {
           </a>
         </Link>
       </section>
-    </>
+    </Layout>
   )
 }
 

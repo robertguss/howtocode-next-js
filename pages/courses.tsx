@@ -1,12 +1,12 @@
 import Head from "next/head"
 import Layout from "@/components/Layout"
 import PageHeader from "@/components/PageHeader"
-import BooksGrid from "@/components/Books/BooksGrid"
+import Courses from "@/components/Courses/Courses"
 
-let pageTitle = "Books"
-let pageDescription = "All books are free!"
-let seoTitle = "Books | How To Code"
-let seoDescription = "Download all of my books for free!"
+let pageTitle = "Courses"
+let pageDescription = "All courses are free!"
+let seoTitle = "Courses | How To Code"
+let seoDescription = "How to Code's free web development courses"
 
 export default function Books() {
   return (
@@ -17,10 +17,9 @@ export default function Books() {
       </Head>
 
       <main className="py-12 lg:py-20">
-        <article className="max-w-6xl mx-auto px-3">
+        <article className="max-w-7xl mx-auto px-3">
           <PageHeader title={pageTitle} description={pageDescription} />
-
-          <BooksGrid />
+          <Courses />
         </article>
       </main>
     </Layout>
