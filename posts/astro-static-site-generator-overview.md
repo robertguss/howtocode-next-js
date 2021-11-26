@@ -18,7 +18,7 @@ Suppose you have been building websites for the past few years. In that case, yo
 
 Astro also comes with it's own [components](https://docs.astro.build/core-concepts/astro-components) as `.astro` files. These are single-file components, similar to Vue, where the file contains all of your JS, HTML, and styles in a single file. The styles are scoped to the component only and will not leak or "cascade" into other components or areas of your site. Here is what my `Card.astro` component looks like.
 
-```
+```markup
 ---
 import { format, parseISO } from 'date-fns/fp'
 
