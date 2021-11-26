@@ -5,14 +5,14 @@ import Head from "next/head"
 import path from "path"
 import rehypeSlug from "rehype-slug"
 import rehypePrism from "@mapbox/rehype-prism"
-import Layout from "../../components/Layout"
-import PostsLayout from "../../components/Posts/PostsLayout"
+import Layout from "../../../components/Layout"
+import PostsLayout from "../../../components/Posts/PostsLayout"
 
 import {
   POSTS_PATH,
   allContentFilePaths,
   getToCForMarkdown,
-} from "../../utils/mdxUtils"
+} from "../../../utils/mdxUtils"
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -28,10 +28,11 @@ const components = {
 }
 
 export default function LessonPage({ toc, source }) {
+  console.log(source)
   return (
     <Layout>
       <Head>
-        <title>Posts | How To Code</title>
+        <title>Tutorial | How To Code</title>
         <meta name="description" content="" />
       </Head>
 
