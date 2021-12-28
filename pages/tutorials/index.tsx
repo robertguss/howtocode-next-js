@@ -3,10 +3,10 @@ import Layout from "@/components/Layout"
 import PageHeader from "@/components/PageHeader"
 import Tutorials from "@/components/Tutorials/Tutorials"
 
-let pageTitle = "Courses"
-let pageDescription = "All courses are free!"
-let seoTitle = "Courses | How To Code"
-let seoDescription = "How to Code's free web development courses"
+let pageTitle = "Tutorials"
+let pageDescription = ""
+let seoTitle = "Tutorials | How To Code"
+let seoDescription = "How to Code's free web development tutorials"
 
 export default function Books() {
   return (
