@@ -1,6 +1,8 @@
 module.exports = {
-  mode: "jit",
-  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
   important: true,
   theme: {
     borderColor: (theme) => ({
@@ -106,9 +108,6 @@ module.exports = {
         "9xl": "7rem",
       },
     },
-  },
-  variants: {
-    inset: ["responsive", "hover"],
   },
   plugins: [
     // https://github.com/tailwindlabs/tailwindcss-aspect-ratio
