@@ -27,7 +27,7 @@ const components = {
   Head,
 }
 
-export default function LessonPage({ toc, source }) {
+export default function LessonPage({ toc, source, slug }) {
   return (
     <Layout>
       <Head>
@@ -35,7 +35,12 @@ export default function LessonPage({ toc, source }) {
         <meta name="description" content="" />
       </Head>
 
-      <PostsLayout toc={toc} source={source} components={components} />
+      <PostsLayout
+        toc={toc}
+        source={source}
+        components={components}
+        slug={slug}
+      />
     </Layout>
   )
 }
@@ -59,6 +64,7 @@ export const getStaticProps = async ({ params }) => {
     props: {
       source: mdxSource,
       toc,
+      slug: params.slug,
     },
   }
 }
