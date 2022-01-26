@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function BooksGrid() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 py-8">
+    <section className="grid grid-cols-1 gap-6 py-8 md:grid-cols-2 lg:grid-cols-2">
       <Link href="/books/go-basics.zip">
         <a target="_blank">
           <Image

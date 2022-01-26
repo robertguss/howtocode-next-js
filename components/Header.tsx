@@ -4,11 +4,11 @@ export default function Header() {
   return (
     <header className="bg-blue-600">
       <nav
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
         aria-label="Top"
         data-test="navigation"
       >
-        <div className="w-full py-6 flex items-center justify-between border-b border-indigo-500 lg:border-none">
+        <div className="flex w-full items-center justify-between border-b border-indigo-500 py-6 lg:border-none">
           <div className="flex items-center">
             <Link href="/">
               <a>
@@ -30,7 +30,7 @@ export default function Header() {
               </a>
             </Link>
 
-            <div className="hidden ml-10 space-x-8 lg:block">
+            <div className="ml-10 hidden space-x-8 lg:block">
               <Link href="/books">
                 <a
                   className="text-base font-medium text-white hover:text-indigo-50"
@@ -75,7 +75,7 @@ export default function Header() {
           <div className="">
             <Link href="/search">
               <a
-                className="py-2 px-4 border border-transparent rounded-md text-base font-medium text-white"
+                className="rounded-md border border-transparent py-2 px-4 text-base font-medium text-white"
                 data-test="link-search"
               >
                 <svg
@@ -96,7 +96,7 @@ export default function Header() {
             </Link>
           </div>
         </div>
-        <div className="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
+        <div className="flex flex-wrap justify-center space-x-6 py-4 lg:hidden">
           <Link href="/books">
             <a
               className="text-base font-medium text-white hover:text-indigo-50"

@@ -1,6 +1,6 @@
 export default function Social() {
   return (
-    <div className="flex items-center justify-center mt-4">
+    <div className="mt-4 flex items-center justify-center">
       <a
         href="https://twitter.com/howtocode_io"
         className="ml-4"

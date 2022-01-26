@@ -18,7 +18,7 @@ export default function Books() {
       </Head>
 
       <main className="py-12 lg:py-20">
-        <article className="max-w-7xl mx-auto px-3">
+        <article className="mx-auto max-w-7xl px-3">
           <PageHeader title={pageTitle} description={pageDescription} />
           <SearchInput />
         </article>

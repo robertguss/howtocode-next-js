@@ -23,10 +23,10 @@ export default function Home({ allPosts }) {
       </Head>
 
       <main className="py-12 lg:py-20">
-        <article className="max-w-6xl mx-auto px-3">
+        <article className="mx-auto max-w-6xl px-3">
           <PageHeader title={pageTitle} description={pageDescription} />
           <section
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8"
+            className="grid grid-cols-1 gap-6 py-8 md:grid-cols-2 lg:grid-cols-3"
             data-test="articles-section"
           >
             {filteredPosts.map((post, index) => (
