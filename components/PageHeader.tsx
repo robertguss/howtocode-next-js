@@ -1,6 +1,6 @@
 export default function PageHeader({ title, description }) {
   return (
-    <header className="mx-auto max-w-xl text-center content">
+    <header className="content mx-auto max-w-xl text-center">
       <h1 className="mb-4" data-test="header-title">
         {title}
       </h1>
