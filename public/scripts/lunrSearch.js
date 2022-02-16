@@ -121,6 +121,7 @@ const renderResults = (results) => {
   let instance = new Mark(document.querySelector("#searchResults"))
   // Only show the ten first results
   results.slice(0, MAX_PAGES).forEach((result, idx) => {
+    console.log(result)
     let resultPage = document.createElement("div")
     resultPage.className = "searchResultPage"
     let metadata = lunrResult[idx].matchData.metadata
@@ -130,7 +131,7 @@ const renderResults = (results) => {
 
     let resultTitle = document.createElement("a")
     resultTitle.className = "searchResultTitle"
-    resultTitle.href = result.url
+    resultTitle.href = `posts/${result.slug}`
     resultTitle.innerHTML = result.title
     resultPage.append(resultTitle)
 
