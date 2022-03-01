@@ -4,6 +4,7 @@ import Link from "next/link"
 import { MDXRemote } from "next-mdx-remote"
 import Script from "next/script"
 import Toc from "./Toc"
+import EmailSignup from "../EmailSignup"
 
 export default function LessonLayout({ toc, source, components, slug }) {
   return (
@@ -72,6 +73,7 @@ export default function LessonLayout({ toc, source, components, slug }) {
                   </div>
                 </div>
               </div>
+              <EmailSignup />
             </main>
           </div>
         </div>
