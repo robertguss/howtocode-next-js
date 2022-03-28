@@ -3,13 +3,11 @@ title: "Cypress Real World App"
 date: "2022-03-01"
 slug: "cypress-real-world-app"
 description: "In this short article I give a brief overview of the Cypress Real World app, which is a payment application to demonstrate real-world usage of Cypress testing methods, patterns, and workflows"
-hero: "/images/hero/rwa-cover.jpg"
+hero: "/images/hero/real-world-app.png"
 tags: ["cypress"]
 ---
 
 ## Overview
-
-![](/images/cypress-real-world-app/rwa.png)
 
 [The Real World App (RWA)](https://github.com/cypress-io/cypress-realworld-app) is an application created by the Cypress team that demonstrates real-world usage of Cypress testing methods, patterns, and workflows. Essentially, this application is a [Venmo](https://venmo.com/) clone.
 
