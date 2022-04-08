@@ -1,7 +1,7 @@
 ---
-title: "Cypress Real World Testing"
+title: "Real World Testing with Cypress"
 date: "2022-03-28"
-slug: "cypress-real-world-testing"
+slug: "real-world-testing-with-cypress"
 description: "In this short article I give a brief overview of the Cypress Real World app, which is a payment application to demonstrate real-world usage of Cypress testing methods, patterns, and workflows"
 hero: "/images/hero/real-world-testing.png"
 tags: ["cypress"]
