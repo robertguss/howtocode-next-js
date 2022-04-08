@@ -4,6 +4,7 @@ import Layout from "@/components/Layout"
 import { getAllPosts } from "@/utils/mdxUtils"
 import PreviewCard from "@/components/Posts/PreviewCard"
 import PageHeader from "@/components/PageHeader"
+import EmailSignup from "@/components/EmailSignup"
 
 let title = "How To Code"
 let description = "Tutorials for Web Developers"
@@ -41,6 +42,8 @@ export default function Home({ allPosts }) {
           </a>
         </Link>
       </section>
+
+      <EmailSignup />
     </Layout>
   )
 }
