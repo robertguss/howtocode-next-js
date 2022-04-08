@@ -4,6 +4,7 @@ import Layout from "@/components/Layout"
 import { getAllPosts } from "@/utils/mdxUtils"
 import PreviewCard from "@/components/Posts/PreviewCard"
 import PageHeader from "@/components/PageHeader"
+import EmailSignup from "@/components/EmailSignup"
 
 let title = "How To Code"
 let description = "Tutorials for Web Developers"
@@ -34,13 +35,15 @@ export default function Home({ allPosts }) {
         </article>
       </main>
 
-      <section className="flex justify-center space-x-8 pt-8 text-xl font-bold">
+      <section className="flex justify-center space-x-8 text-xl font-bold">
         <Link href="/posts">
           <a className="mr-8" data-test="see-all-link">
-            See All<span className="squiggle">&rarr;</span>
+            All Articles <span className="squiggle">&rarr;</span>
           </a>
         </Link>
       </section>
+
+      <EmailSignup />
     </Layout>
   )
 }
