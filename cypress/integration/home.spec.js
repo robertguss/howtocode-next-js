@@ -8,7 +8,7 @@ describe("Home Page", () => {
   })
 
   it("the See All link at the bottom of the posts links to the /posts page", () => {
-    cy.getBySel("see-all-link").contains("See All").click()
+    cy.getBySel("see-all-link").contains("All Articles").click()
     cy.location("pathname").should("equal", "/posts")
   })
 
