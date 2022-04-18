@@ -74,8 +74,8 @@ export default function Header() {
               <Link href="https://howtocode.substack.com/">
                 <a
                   className="text-base font-medium text-white hover:text-indigo-50"
-                  key="Tutorials"
-                  data-test="link-tutorials"
+                  key="Newsletter"
+                  data-test="link-newsletter"
                   target="_blank"
                 >
                   Newsletter
