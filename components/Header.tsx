@@ -70,6 +70,17 @@ export default function Header() {
                   Tutorials
                 </a>
               </Link>
+
+              <Link href="https://howtocode.substack.com/">
+                <a
+                  className="text-base font-medium text-white hover:text-indigo-50"
+                  key="Tutorials"
+                  data-test="link-tutorials"
+                  target="_blank"
+                >
+                  Newsletter
+                </a>
+              </Link>
             </div>
           </div>
           <div className="">
@@ -130,6 +141,15 @@ export default function Header() {
               key="Company"
             >
               Tutorials
+            </a>
+          </Link>
+
+          <Link href="https://howtocode.substack.com/">
+            <a
+              className="text-base font-medium text-white hover:text-indigo-50"
+              key="Company"
+            >
+              Newsletter
             </a>
           </Link>
         </div>
