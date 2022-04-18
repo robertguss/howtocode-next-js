@@ -36,7 +36,7 @@
     "@types/lodash": "^4.14.178",
     "@types/react": "^17.0.38",
     "autoprefixer": "^10.4.1",
-    "cypress": "^9.2.0",
+    "cypress": "^9.5.4",
     "eslint": "^8.5.0",
     "eslint-config-next": "^12.0.7",
     "eslint-config-prettier": "^8.3.0",
