@@ -71,12 +71,11 @@ export default function Header() {
                 </a>
               </Link>
 
-              <Link href="https://howtocode.substack.com/">
+              <Link href="/newsletter">
                 <a
                   className="text-base font-medium text-white hover:text-indigo-50"
                   key="Newsletter"
                   data-test="link-newsletter"
-                  target="_blank"
                 >
                   Newsletter
                 </a>
@@ -144,7 +143,7 @@ export default function Header() {
             </a>
           </Link>
 
-          <Link href="https://howtocode.substack.com/">
+          <Link href="/newsletter">
             <a
               className="text-base font-medium text-white hover:text-indigo-50"
               key="Company"
