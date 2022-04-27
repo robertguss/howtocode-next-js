@@ -4,7 +4,7 @@ import Layout from "@/components/Layout"
 import { getAllPosts } from "@/utils/mdxUtils"
 import PreviewCard from "@/components/Posts/PreviewCard"
 import PageHeader from "@/components/PageHeader"
-import EmailSignup from "@/components/EmailSignup"
+import Subscribe from "@/components/Subscribe/Subscribe"
 
 let title = "How To Code"
 let description = "Tutorials for Web Developers"
@@ -43,7 +43,9 @@ export default function Home({ allPosts }) {
         </Link>
       </section>
 
-      <EmailSignup />
+      <div className="mx-auto my-12 max-w-3xl">
+        <Subscribe />
+      </div>
     </Layout>
   )
 }
