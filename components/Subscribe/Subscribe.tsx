@@ -1,5 +1,5 @@
 import { useState, useRef } from "react"
-import Link from "next/link"
+// import Link from "next/link"
 import useSWR from "swr"
 
 import fetcher from "../../lib/fetcher"
@@ -12,7 +12,7 @@ export default function Subscribe() {
   const [form, setForm] = useState<FormState>({ state: Form.Initial })
   const inputEl = useRef(null)
   const { data } = useSWR<Subscribers>("/api/subscribers", fetcher)
-  const subscriberCount = new Number(data?.count)
+  // const subscriberCount = new Number(data?.count)
 
   const subscribe = async (e) => {
     e.preventDefault()
@@ -49,15 +49,15 @@ export default function Subscribe() {
       <p className="text-lg font-bold text-gray-900 dark:text-gray-100 md:text-xl">
         Subscribe to the newsletter
       </p>
-      <p className="my-1 text-gray-800 dark:text-gray-200">
+      {/* <p className="my-1 text-gray-800 dark:text-gray-200">
         Get emails from me about web development, tech, and early access to new
         articles.
-      </p>
+      </p> */}
       <form className="relative my-4" onSubmit={subscribe}>
         <input
           ref={inputEl}
           aria-label="Email for newsletter"
-          placeholder="tim@apple.com"
+          placeholder="john@gmail.com"
           type="email"
           autoComplete="email"
           required
@@ -75,14 +75,15 @@ export default function Subscribe() {
       ) : form.state === Form.Success ? (
         <SuccessMessage>{form.message}</SuccessMessage>
       ) : (
-        <p className="text-sm text-gray-800 dark:text-gray-200">
-          {`${
-            subscriberCount > 0 ? subscriberCount.toLocaleString() : "-"
-          } subscribers – `}
-          <Link href="/newsletter">
-            <a>35 issues</a>
-          </Link>
-        </p>
+        // <p className="text-sm text-gray-800 dark:text-gray-200">
+        //   {`${
+        //     subscriberCount > 0 ? subscriberCount.toLocaleString() : "-"
+        //   } subscribers – `}
+        //   <Link href="/newsletter">
+        //     <a>35 issues</a>
+        //   </Link>
+        // </p>
+        <></>
       )}
     </div>
   )
