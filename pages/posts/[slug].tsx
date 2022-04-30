@@ -7,6 +7,7 @@ import rehypeSlug from "rehype-slug"
 import rehypePrism from "@mapbox/rehype-prism"
 import Layout from "../../components/Layout"
 import PostsLayout from "../../components/Posts/PostsLayout"
+import CopyToClipboard from "@/components/CopyToClipboard"
 
 import {
   POSTS_PATH,
@@ -25,6 +26,7 @@ const components = {
   // See the notes in README.md for more details.
   //TestComponent: dynamic(() => import('../../components/TestComponent')),
   Head,
+  pre: CopyToClipboard,
 }
 
 export default function LessonPage({ toc, source, slug }) {
