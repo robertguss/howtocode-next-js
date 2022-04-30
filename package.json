@@ -8,7 +8,7 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "dev": "next dev",
-    "dev:watch": "next-remote-watch ./content",
+    "dev:watch": "next-remote-watch ./posts",
     "lint": "next lint",
     "postbuild": "next-sitemap && yarn create-search-index",
     "pre-commit": "yarn types && pretty-quick --staged && yarn run lint && yarn run stop-only",
