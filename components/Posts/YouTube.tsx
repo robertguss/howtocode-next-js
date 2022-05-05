@@ -1,5 +1,5 @@
 type Props = {
-  YouTubeID: string
+  id: string
 }
 
 export default function YouTube({ id }: Props) {
