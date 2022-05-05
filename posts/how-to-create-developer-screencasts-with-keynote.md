@@ -3,7 +3,7 @@ title: "How to Create Developer Screencasts with Keynote"
 date: "2022-05-05"
 slug: "how-to-create-developer-screencasts-with-keynote"
 description: "In this article, I will show you how I create developer screencasts with Keynote."
-hero: "/images/hero/adonis-js.png"
+hero: "/images/how-to-create-developer-screencasts-with-keynote/hero.png"
 tags: ["screencast", "developer"]
 ---
 
