@@ -9,6 +9,7 @@ import Layout from "../../components/Layout"
 import PostsLayout from "../../components/Posts/PostsLayout"
 import CopyToClipboard from "@/components/CopyToClipboard"
 import YouTube from "@/components/Posts/YouTube"
+import remarkAdmonitions from "remark-admonitions"
 
 import {
   POSTS_PATH,
@@ -57,7 +58,7 @@ export const getStaticProps = async ({ params }) => {
   const mdxSource = await serialize(content, {
     // Optionally pass remark/rehype plugins
     mdxOptions: {
-      remarkPlugins: [],
+      remarkPlugins: [remarkAdmonitions],
       // @ts-ignore
       rehypePlugins: [rehypeSlug, rehypePrism],
     },

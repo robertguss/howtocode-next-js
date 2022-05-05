@@ -9,9 +9,9 @@ tags: ["screencast", "developer"]
 
 In this article, I will show you how I create screencasts for developers using Keynote.
 
-<aside>
-💡 Info: I use a Mac, so all of the information and software mentioned in this article will be specific to Mac.
-</aside>
+:::tip
+Info: I use a Mac, so all of the information and software mentioned in this article will be specific to Mac.
+:::
 
 ## Screencast Examples
 
@@ -39,10 +39,9 @@ In the video below, I broke the script into nine different sections.
 
 Here is what the script looks like:
 
-<aside>
-💡 Tip: You can click on the image to see a larger version.
-
-</aside>
+:::tip
+Tip: You can click on the image to see a larger version.
+:::
 
 ![](/images/how-to-create-developer-screencasts-with-keynote/script-example.png)
 
