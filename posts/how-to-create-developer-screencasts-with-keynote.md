@@ -129,7 +129,7 @@ After adjusting the audio, I begin to trim, edit, delete, etc.
 
 ### Ripple Delete
 
-One technique that is a game changer for editing in Screenflow is something called Ripple Delete. It will significantly cut down the amount of time you spend editing.
+One technique that is a game-changer for editing in Screenflow is something called Ripple Delete. It will significantly cut down the amount of time you spend editing.
 
 You can watch this video to learn it: [How to Ripple Delete](https://www.youtube.com/watch?v=QGvqMS3OUuQ).
 
@@ -139,7 +139,7 @@ Another tool that I have heard a lot of great things about, but have yet to use 
 
 ### Descript
 
-Another tool we use a lot at work is called [Descript](https://www.descript.com/). It is a great tool for editing and collaborating on screencasts. What makes it really powerful is the ability for it's AI to learn your voice. This allows you to easily fix misspoken words, sentences, phrases etc. All you have to do is highlight that word(s) in descript, type out the correct word(s) and Descript will use your own voice to correct it. It sounds incredibly realistic.
+Another tool we use a lot at work is called [Descript](https://www.descript.com/). It is a great tool for editing and collaborating on screencasts. What makes it really powerful is the ability of its AI to learn your voice. This allows you to easily fix misspoken words, sentences, phrases, etc. All you have to do is highlight that word(s) in descript, type out the correct word(s) and Descript will use your own voice to correct it. It sounds incredibly realistic.
 
 A tool like this is by no means essential, but it does come in handy. It is worth looking into if you are going to be making a lot of screencasts.
 
