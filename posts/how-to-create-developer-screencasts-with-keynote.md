@@ -9,8 +9,12 @@ tags: ["screencast", "developer"]
 
 In this article, I will show you how I create screencasts for developers using Keynote.
 
+:::info
+**None** of the links in this article are affiliate links.
+:::
+
 :::tip
-Info: I use a Mac, so all of the information and software mentioned in this article will be specific to Mac.
+I use a Mac, so all of the information and software mentioned in this article will be specific to Mac.
 :::
 
 ## Screencast Examples
@@ -40,7 +44,7 @@ In the video below, I broke the script into nine different sections.
 Here is what the script looks like:
 
 :::tip
-Tip: You can click on the image to see a larger version.
+You can click on the image to see a larger version.
 :::
 
 ![](/images/how-to-create-developer-screencasts-with-keynote/script-example.png)
@@ -122,6 +126,22 @@ Next, before I start editing, I adjust the audio. Take a look at this screenshot
 You want to select **all of the audio tracks** and then click on the speaker icon in the right sidebar. Check the “Smooth Volume Levels” checkbox and the “Remove Background Noise” checkbox. You can adjust how much background adjustment is necessary with the slider below it. This will help to make your audio levels sound consistent.
 
 After adjusting the audio, I begin to trim, edit, delete, etc.
+
+### Ripple Delete
+
+One technique that is a game-changer for editing in Screenflow is something called Ripple Delete. It will significantly cut down the amount of time you spend editing.
+
+You can watch this video to learn it: [How to Ripple Delete](https://www.youtube.com/watch?v=QGvqMS3OUuQ).
+
+### Recut
+
+Another tool that I have heard a lot of great things about, but have yet to use myself is [Recut](https://getrecut.com/). Check it out and see if it helps you.
+
+### Descript
+
+Another tool we use a lot at work is called [Descript](https://www.descript.com/). It is a great tool for editing and collaborating on screencasts. What makes it really powerful is the ability of its AI to learn your voice. This allows you to easily fix misspoken words, sentences, phrases, etc. All you have to do is highlight that word(s) in descript, type out the correct word(s) and Descript will use your own voice to correct it. It sounds incredibly realistic.
+
+A tool like this is by no means essential, but it does come in handy. It is worth looking into if you are going to be making a lot of screencasts.
 
 ## Exporting
 
