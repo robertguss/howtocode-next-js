@@ -1,4 +1,5 @@
 module.exports = {
+  reactStrictMode: true,
   swcMinify: true,
   images: {
     domains: ["images.unsplash.com", "source.unsplash.com", "tailwindui.com"],
