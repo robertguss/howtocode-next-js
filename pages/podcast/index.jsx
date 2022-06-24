@@ -135,7 +135,7 @@ function EpisodeEntry({ episode }) {
 
 export async function getStaticProps() {
   const feed = await parse("https://feeds.buzzsprout.com/2007004.rss")
-  console.log(feed)
+  // console.log(feed)
 
   return {
     props: {

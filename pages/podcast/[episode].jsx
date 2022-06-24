@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic"
 import { useMemo } from "react"
 import Head from "next/head"
 import { parse } from "rss-to-json"
@@ -6,6 +7,10 @@ import { Layout } from "@/components/Podcast/Layout"
 import { useAudioPlayer } from "@/components/Podcast/AudioProvider"
 import { Container } from "@/components/Podcast/Container"
 import { PlayButton } from "@/components/Podcast/player/PlayButton"
+
+const Description = dynamic(() => import("@/components/Podcast/Description"), {
+  ssr: false,
+})
 
 export default function Episode({ episode }) {
   let date = new Date(episode.published)
@@ -51,9 +56,10 @@ export default function Episode({ episode }) {
                   </time>
                 </div>
               </div>
-              <p className="ml-24 mt-3 text-lg font-medium leading-8 text-slate-700">
+              <Description episode={episode} />
+              {/* <p className="ml-24 mt-3 text-lg font-medium leading-8 text-slate-700">
                 {episode.description}
-              </p>
+              </p> */}
             </header>
             <hr className="my-12 border-gray-200" />
             <div
@@ -65,6 +71,45 @@ export default function Episode({ episode }) {
       </Layout>
     </>
   )
+}
+
+export async function getStaticProps({ params }) {
+  let feed = await parse("https://feeds.buzzsprout.com/2007004.rss")
+  let episode = feed.items
+    .map(
+      ({
+        itunes_episode,
+        title,
+        description,
+        content,
+        enclosures,
+        published,
+      }) => ({
+        id: itunes_episode.toString(),
+        title: `${itunes_episode}: ${title}`,
+        description,
+        content,
+        published,
+        audio: enclosures.map((enclosure) => ({
+          src: enclosure.url,
+          type: enclosure.type,
+        }))[0],
+      })
+    )
+    .find(({ id }) => id === params.episode)
+
+  if (!episode) {
+    return {
+      notFound: true,
+    }
+  }
+
+  return {
+    props: {
+      episode,
+    },
+    revalidate: 10,
+  }
 }
 
 export async function getStaticPaths() {
