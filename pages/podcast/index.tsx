@@ -24,6 +24,8 @@ export default function Home({ episodes }) {
           />
         </Head>
         <div className="pt-16 pb-12 sm:pb-4 lg:pt-12">
+          {/*
+            // @ts-ignore */}
           <Container>
             <h1 className="text-2xl font-bold leading-7 text-slate-900">
               Episodes
@@ -61,6 +63,8 @@ function EpisodeEntry({ episode }) {
       aria-labelledby={`episode-${episode.itunes_episode}-title`}
       className="py-10 sm:py-12"
     >
+      {/*
+            // @ts-ignore */}
       <Container>
         <div className="flex flex-col items-start">
           <h2
@@ -134,6 +138,7 @@ function EpisodeEntry({ episode }) {
 }
 
 export async function getStaticProps() {
+  // @ts-ignore
   const feed = await parse("https://feeds.buzzsprout.com/2007004.rss")
 
   return {

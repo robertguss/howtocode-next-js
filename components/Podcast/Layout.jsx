@@ -2,6 +2,8 @@ import { useId, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import clsx from "clsx"
+import Header from "@/components/Header"
+import Footer from "@/components/Footer/Footer"
 
 import { AudioPlayer } from "@/components/Podcast/player/AudioPlayer"
 import posterImage from "@/public/images/podcast/podcast-cover.jpg"

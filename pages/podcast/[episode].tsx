@@ -43,6 +43,8 @@ export default function Episode({ episode, showNotes }) {
           <meta name="description" content={episode.description} />
         </Head>
         <article className="py-16 lg:py-36">
+          {/*
+            // @ts-ignore */}
           <Container>
             <header className="flex flex-col">
               <div className="flex items-center gap-6">
@@ -94,6 +96,7 @@ export async function getStaticProps({ params }) {
   const { content, data } = matter(source)
   const mdxSource = await serialize(content)
 
+  // @ts-ignore
   let feed = await parse("https://feeds.buzzsprout.com/2007004.rss")
   let episode = feed.items
     .map(
@@ -134,6 +137,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
+  // @ts-ignore
   let feed = await parse("https://feeds.buzzsprout.com/2007004.rss")
 
   return {
