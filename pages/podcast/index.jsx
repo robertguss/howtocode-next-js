@@ -1,36 +1,42 @@
-import { useMemo } from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import { parse } from 'rss-to-json'
+import { useMemo } from "react"
+import Head from "next/head"
+import Link from "next/link"
+import { parse } from "rss-to-json"
 
-import { useAudioPlayer } from '@/components/AudioProvider'
-import { Container } from '@/components/Container'
+import { useAudioPlayer } from "@/components/Podcast/AudioProvider"
+import { Container } from "@/components/Podcast/Container"
+import { AudioProvider } from "@/components/Podcast/AudioProvider"
+import { Layout } from "@/components/Podcast/Layout"
 
 export default function Home({ episodes }) {
   return (
     <>
-      <Head>
-        <title>
-          Their Side - Conversations with the most tragically misunderstood
-          people of our time
-        </title>
-        <meta
-          name="description"
-          content="Conversations with the most tragically misunderstood people of our time."
-        />
-      </Head>
-      <div className="pt-16 pb-12 sm:pb-4 lg:pt-12">
-        <Container>
-          <h1 className="text-2xl font-bold leading-7 text-slate-900">
-            Episodes
-          </h1>
-        </Container>
-        <div className="divide-y divide-slate-100 sm:mt-4 lg:mt-8 lg:border-t lg:border-slate-100">
-          {episodes.map((episode) => (
-            <EpisodeEntry key={episode.id} episode={episode} />
-          ))}
-        </div>
-      </div>
+      <AudioProvider>
+        <Layout>
+          <Head>
+            <title>
+              Their Side - Conversations with the most tragically misunderstood
+              people of our time
+            </title>
+            <meta
+              name="description"
+              content="Conversations with the most tragically misunderstood people of our time."
+            />
+          </Head>
+          <div className="pt-16 pb-12 sm:pb-4 lg:pt-12">
+            <Container>
+              <h1 className="text-2xl font-bold leading-7 text-slate-900">
+                Episodes
+              </h1>
+            </Container>
+            <div className="divide-y divide-slate-100 sm:mt-4 lg:mt-8 lg:border-t lg:border-slate-100">
+              {episodes.map((episode) => (
+                <EpisodeEntry key={episode.id} episode={episode} />
+              ))}
+            </div>
+          </div>
+        </Layout>
+      </AudioProvider>
     </>
   )
 }
@@ -70,10 +76,10 @@ function EpisodeEntry({ episode }) {
             dateTime={date.toISOString()}
             className="-order-1 font-mono text-sm leading-7 text-slate-500"
           >
-            {new Intl.DateTimeFormat('en-US', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric',
+            {new Intl.DateTimeFormat("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
             }).format(date)}
           </time>
           <p className="mt-1 text-base leading-7 text-slate-700">
@@ -86,7 +92,7 @@ function EpisodeEntry({ episode }) {
               className="flex items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900"
             >
               <span className="sr-only">
-                {player.playing ? 'Pause' : 'Play'}
+                {player.playing ? "Pause" : "Play"}
                 episode {episode.title}
               </span>
               <svg
@@ -129,7 +135,7 @@ function EpisodeEntry({ episode }) {
 }
 
 export async function getStaticProps() {
-  const feed = await parse('https://their-side-feed.vercel.app/api/feed')
+  const feed = await parse("https://their-side-feed.vercel.app/api/feed")
 
   return {
     props: {

@@ -51,6 +51,16 @@ export default function Header() {
                 </a>
               </Link>
 
+              <Link href="/podcast">
+                <a
+                  className="text-base font-medium text-white hover:text-indigo-50"
+                  key="Articles"
+                  data-test="link-articles"
+                >
+                  Podcast
+                </a>
+              </Link>
+
               <Link href="/courses">
                 <a
                   className="text-base font-medium text-white hover:text-indigo-50"
@@ -122,6 +132,15 @@ export default function Header() {
               key="Pricing"
             >
               Articles
+            </a>
+          </Link>
+
+          <Link href="/podcast">
+            <a
+              className="text-base font-medium text-white hover:text-indigo-50"
+              key="Pricing"
+            >
+              Podcast
             </a>
           </Link>
 

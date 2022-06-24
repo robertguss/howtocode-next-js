@@ -1,10 +1,10 @@
-import { useId, useState } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import clsx from 'clsx'
+import { useId, useState } from "react"
+import Image from "next/image"
+import Link from "next/link"
+import clsx from "clsx"
 
-import { AudioPlayer } from '@/components/player/AudioPlayer'
-import posterImage from '@/images/poster.png'
+import { AudioPlayer } from "@/components/Podcast/player/AudioPlayer"
+import posterImage from "@/public/images/podcast/podcast-cover.jpg"
 
 function random(length, min, max, seed = 1) {
   return Array.from({ length }).map(() => {
@@ -83,8 +83,8 @@ function AboutSection(props) {
         <span className="ml-2.5">About</span>
       </h2>
       <p
-        className={clsx('mt-2 text-base leading-7 text-slate-700', {
-          'lg:line-clamp-4': !isExpanded,
+        className={clsx("mt-2 text-base leading-7 text-slate-700", {
+          "lg:line-clamp-4": !isExpanded,
         })}
       >
         In this show, Eric and Wes dig deep to get to the facts with guests who
@@ -109,7 +109,7 @@ function AboutSection(props) {
 export function Layout({ children }) {
   return (
     <>
-      <div className="bg-slate-50 lg:fixed lg:inset-y-0 lg:left-0 lg:flex lg:w-112 lg:items-start lg:overflow-y-auto xl:w-120">
+      <div className="lg:w-112 xl:w-120 bg-slate-50 lg:fixed lg:inset-y-0 lg:left-0 lg:flex lg:items-start lg:overflow-y-auto">
         <div className="hidden lg:sticky lg:top-0 lg:flex lg:w-16 lg:flex-none lg:items-center lg:whitespace-nowrap lg:py-12 lg:text-sm lg:leading-7 lg:[writing-mode:vertical-rl]">
           <span className="font-mono text-slate-500">Hosted by</span>
           <span className="mt-6 flex font-bold text-slate-900">
@@ -249,7 +249,7 @@ export function Layout({ children }) {
           </section>
         </div>
       </div>
-      <div className="border-t border-slate-200 lg:relative lg:mb-28 lg:ml-112 lg:border-t-0 xl:ml-120">
+      <div className="lg:ml-112 xl:ml-120 border-t border-slate-200 lg:relative lg:mb-28 lg:border-t-0">
         <Waveform />
         <div className="relative">{children}</div>
       </div>
@@ -274,7 +274,7 @@ export function Layout({ children }) {
           </div>
         </div>
       </div>
-      <div className="fixed inset-x-0 right-0 bottom-0 z-10 rounded-lg lg:left-112 xl:left-120">
+      <div className="lg:left-112 xl:left-120 fixed inset-x-0 right-0 bottom-0 z-10 rounded-lg">
         <AudioPlayer />
       </div>
     </>

@@ -4,7 +4,8 @@
     "paths": {
       "*": ["types/*.d.ts"],
       "@/components/*": ["components/*"],
-      "@/utils/*": ["utils/*"]
+      "@/utils/*": ["utils/*"],
+      "@/public/*": ["public/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],

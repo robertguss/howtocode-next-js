@@ -1,13 +1,13 @@
-import { useEffect, useRef, useState } from 'react'
-import Link from 'next/link'
+import { useEffect, useRef, useState } from "react"
+import Link from "next/link"
 
-import { useAudioPlayer } from '@/components/AudioProvider'
-import { ForwardButton } from '@/components/player/ForwardButton'
-import { MuteButton } from '@/components/player/MuteButton'
-import { PlaybackRateButton } from '@/components/player/PlaybackRateButton'
-import { PlayButton } from '@/components/player/PlayButton'
-import { RewindButton } from '@/components/player/RewindButton'
-import { Slider } from '@/components/player/Slider'
+import { useAudioPlayer } from "@/components/Podcast/AudioProvider"
+import { ForwardButton } from "@/components/Podcast/player/ForwardButton"
+import { MuteButton } from "@/components/Podcast/player/MuteButton"
+import { PlaybackRateButton } from "@/components/Podcast/player/PlaybackRateButton"
+import { PlayButton } from "@/components/Podcast/player/PlayButton"
+import { RewindButton } from "@/components/Podcast/player/RewindButton"
+import { Slider } from "@/components/Podcast/player/Slider"
 
 function parseTime(seconds) {
   let hours = Math.floor(seconds / 3600)
@@ -18,9 +18,9 @@ function parseTime(seconds) {
 
 function formatHumanTime(seconds) {
   let [h, m, s] = parseTime(seconds)
-  return `${h} hour${h === 1 ? '' : 's'}, ${m} minute${
-    m === 1 ? '' : 's'
-  }, ${s} second${s === 1 ? '' : 's'}`
+  return `${h} hour${h === 1 ? "" : "s"}, ${m} minute${
+    m === 1 ? "" : "s"
+  }, ${s} second${s === 1 ? "" : "s"}`
 }
 
 export function AudioPlayer() {

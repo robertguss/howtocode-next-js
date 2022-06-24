@@ -1,6 +1,7 @@
 import { AppProps } from "next/app"
-import "tailwindcss/tailwind.css"
+import "../styles/tailwind.css"
 import "../styles/global.css"
+import "focus-visible"
 import * as ga from "@/utils/ga"
 import { useEffect } from "react"
 import { useRouter } from "next/router"
