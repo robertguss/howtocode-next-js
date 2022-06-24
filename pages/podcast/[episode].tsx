@@ -89,7 +89,6 @@ export default function Episode({ episode, showNotes }) {
 }
 
 export async function getStaticProps({ params }) {
-  console.log(params)
   const podcastsFilePath = path.join(PODCASTS_PATH, `${params.episode}.md`)
   const source = fs.readFileSync(podcastsFilePath)
   const { content, data } = matter(source)
