@@ -26,7 +26,7 @@ export default function Home({ episodes }) {
                 Episodes
               </h1>
             </Container>
-            <div className="divide-y divide-slate-100 sm:mt-4 lg:mt-8 lg:border-t lg:border-slate-100">
+            <div className="foo h-2.5 w-2.5 ">
               {episodes.map((episode) => (
                 <EpisodeEntry key={episode.id} episode={episode} />
               ))}

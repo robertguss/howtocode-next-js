@@ -46,7 +46,6 @@
   "devDependencies": {
     "@types/lodash": "^4.14.182",
     "@types/react": "^18.0.14",
-    "autoprefixer": "^10.4.7",
     "cypress": "^10.2.0",
     "eslint": "8.18.0",
     "eslint-config-next": "12.1.6",

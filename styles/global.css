@@ -1,4 +1,19 @@
 /*
+  Content
+*/
+
+.content h1 {
+  @apply font-display font-bold uppercase leading-none;
+  margin-bottom: 1em;
+
+  font-size: min(max(3rem, 6.25vw), 7rem);
+
+  @supports (font-size: clamp(3rem, 6.25vw, 7rem)) {
+    font-size: clamp(3rem, 6.25vw, 7rem);
+  }
+}
+
+/*
   Modal for screenshots
 */
 
@@ -97,21 +112,6 @@
 
 .aspect-ratio-21\/9 {
   padding-bottom: 42.86%;
-}
-
-/*
-  Content
-*/
-
-.content h1 {
-  @apply font-display font-bold uppercase leading-none;
-  margin-bottom: 1em;
-
-  font-size: min(max(3rem, 6.25vw), 7rem);
-
-  @supports (font-size: clamp(3rem, 6.25vw, 7rem)) {
-    font-size: clamp(3rem, 6.25vw, 7rem);
-  }
 }
 
 /*
@@ -247,4 +247,11 @@
 .admonition-note .admonition-icon svg {
   stroke: #f1c40f;
   fill: #f1c40f;
+}
+
+/* Podcast Page */
+.podcast-left-sidebar svg {
+  height: 10px;
+  width: 10px;
+  margin-right: 10px;
 }
