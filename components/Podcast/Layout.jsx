@@ -87,11 +87,11 @@ function AboutSection(props) {
           "lg:line-clamp-4": !isExpanded,
         })}
       >
-        In this show, Eric and Wes dig deep to get to the facts with guests who
-        have been labeled villains by a society quick to judge, without actually
-        getting the full story. Tune in every Thursday to get to the truth with
-        another misunderstood outcast as they share the missing context in their
-        tragic tale.
+        The How to Code podcast exists for aspiring web developers seeking their
+        first tech jobs. Host Robert Guss is a self-taught front-end developer
+        currently working as a Developer Experience Engineer at Cypress.io. We
+        discuss learning how to code, strategies for getting your first job, web
+        technology news, interviews, testing, and more on this show.
       </p>
       {!isExpanded && (
         <button
@@ -109,14 +109,11 @@ function AboutSection(props) {
 export function Layout({ children }) {
   return (
     <>
-      <div className="lg:w-112 xl:w-120 bg-slate-50 lg:fixed lg:inset-y-0 lg:left-0 lg:flex lg:items-start lg:overflow-y-auto">
+      <div className="bg-slate-50 lg:fixed lg:inset-y-0 lg:left-0 lg:flex lg:w-112 lg:items-start lg:overflow-y-auto xl:w-120">
         <div className="hidden lg:sticky lg:top-0 lg:flex lg:w-16 lg:flex-none lg:items-center lg:whitespace-nowrap lg:py-12 lg:text-sm lg:leading-7 lg:[writing-mode:vertical-rl]">
           <span className="font-mono text-slate-500">Hosted by</span>
           <span className="mt-6 flex font-bold text-slate-900">
-            <span className="after:mt-6 after:text-slate-400 after:content-['/']">
-              Eric Gordon
-            </span>
-            <span className="mt-6">Wes Mantooth</span>
+            <span className="after:mt-6 after:text-slate-400">Robert Guss</span>
           </span>
         </div>
         <div className="relative z-10 mx-auto px-4 pb-4 pt-10 sm:px-6 md:max-w-2xl md:px-4 lg:min-h-full lg:flex-auto lg:border-x lg:border-slate-200 lg:py-12 lg:px-8 xl:px-12">
@@ -138,12 +135,11 @@ export function Layout({ children }) {
           <div className="mt-10 text-center lg:mt-12 lg:text-left">
             <p className="text-xl font-bold text-slate-900">
               <Link href="/">
-                <a>Their Side</a>
+                <a>How to Code: Web Development</a>
               </Link>
             </p>
             <p className="mt-3 text-lg font-medium leading-8 text-slate-700">
-              Conversations with the most tragically misunderstood people of our
-              time.
+              For aspiring web developers seeking their first tech jobs
             </p>
           </div>
           <AboutSection className="mt-12 hidden lg:block" />
@@ -249,7 +245,7 @@ export function Layout({ children }) {
           </section>
         </div>
       </div>
-      <div className="lg:ml-112 xl:ml-120 border-t border-slate-200 lg:relative lg:mb-28 lg:border-t-0">
+      <div className="border-t border-slate-200 lg:relative lg:ml-112 lg:mb-28 lg:border-t-0 xl:ml-120">
         <Waveform />
         <div className="relative">{children}</div>
       </div>
@@ -274,7 +270,7 @@ export function Layout({ children }) {
           </div>
         </div>
       </div>
-      <div className="lg:left-112 xl:left-120 fixed inset-x-0 right-0 bottom-0 z-10 rounded-lg">
+      <div className="fixed inset-x-0 right-0 bottom-0 z-10 rounded-lg lg:left-112 xl:left-120">
         <AudioPlayer />
       </div>
     </>
