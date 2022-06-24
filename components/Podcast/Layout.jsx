@@ -160,7 +160,7 @@ export function Layout({ children }) {
             <div className="h-px bg-gradient-to-r from-slate-200/0 via-slate-200 to-slate-200/0 lg:hidden" />
             <ul className="mt-4 flex justify-center space-x-10 text-base font-medium leading-7 text-slate-700 sm:space-x-8 lg:block lg:space-x-0 lg:space-y-4">
               <li className="flex">
-                <Link href="/">
+                <Link href="https://open.spotify.com/show/5hCsKs0jrh3Nja2sUFnyDK?si=e8b448ab10ee4aae">
                   <a className="group flex items-center">
                     <svg
                       aria-hidden="true"
@@ -174,7 +174,7 @@ export function Layout({ children }) {
                 </Link>
               </li>
               <li className="flex">
-                <Link href="/">
+                <Link href="https://podcasts.apple.com/us/podcast/how-to-code-web-development/id1631365520">
                   <a className="group flex items-center">
                     <svg
                       aria-hidden="true"
@@ -201,7 +201,7 @@ export function Layout({ children }) {
                   </a>
                 </Link>
               </li>
-              <li className="flex">
+              {/* <li className="flex">
                 <Link href="/">
                   <a className="group flex items-center">
                     <svg
@@ -214,9 +214,9 @@ export function Layout({ children }) {
                     <span className="hidden sm:ml-3 sm:block">Overcast</span>
                   </a>
                 </Link>
-              </li>
+              </li> */}
               <li className="flex">
-                <Link href="/">
+                <Link href="https://feeds.buzzsprout.com/2007004.rss">
                   <a className="group flex items-center">
                     <svg
                       aria-hidden="true"
