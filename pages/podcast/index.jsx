@@ -1,39 +1,41 @@
 import { useMemo } from "react"
+import dynamic from "next/dynamic"
 import Head from "next/head"
 import Link from "next/link"
 import { parse } from "rss-to-json"
 
 import { useAudioPlayer } from "@/components/Podcast/AudioProvider"
 import { Container } from "@/components/Podcast/Container"
-import { AudioProvider } from "@/components/Podcast/AudioProvider"
 import { Layout } from "@/components/Podcast/Layout"
+
+const Description = dynamic(() => import("@/components/Podcast/Description"), {
+  ssr: false,
+})
 
 export default function Home({ episodes }) {
   return (
     <>
-      <AudioProvider>
-        <Layout>
-          <Head>
-            <title>Podcast | How To Code</title>
-            <meta
-              name="description"
-              content="The How to Code podcast exists for aspiring web developers seeking their first tech jobs. Host Robert Guss is a self-taught front-end developer..."
-            />
-          </Head>
-          <div className="pt-16 pb-12 sm:pb-4 lg:pt-12">
-            <Container>
-              <h1 className="text-2xl font-bold leading-7 text-slate-900">
-                Episodes
-              </h1>
-            </Container>
-            <div className="foo h-2.5 w-2.5 ">
-              {episodes.map((episode) => (
-                <EpisodeEntry key={episode.id} episode={episode} />
-              ))}
-            </div>
+      <Layout>
+        <Head>
+          <title>Podcast | How To Code</title>
+          <meta
+            name="description"
+            content="The How to Code podcast exists for aspiring web developers seeking their first tech jobs. Host Robert Guss is a self-taught front-end developer..."
+          />
+        </Head>
+        <div className="pt-16 pb-12 sm:pb-4 lg:pt-12">
+          <Container>
+            <h1 className="text-2xl font-bold leading-7 text-slate-900">
+              Episodes
+            </h1>
+          </Container>
+          <div className="foo h-2.5 w-2.5 ">
+            {episodes.map((episode) => (
+              <EpisodeEntry key={episode.itunes_episode} episode={episode} />
+            ))}
           </div>
-        </Layout>
-      </AudioProvider>
+        </div>
+      </Layout>
     </>
   )
 }
@@ -48,7 +50,7 @@ function EpisodeEntry({ episode }) {
         src: episode.audio.src,
         type: episode.audio.type,
       },
-      link: `/${episode.id}`,
+      link: `/podcast/${episode.itunes_episode}`,
     }),
     [episode]
   )
@@ -56,16 +58,16 @@ function EpisodeEntry({ episode }) {
 
   return (
     <article
-      aria-labelledby={`episode-${episode.id}-title`}
+      aria-labelledby={`episode-${episode.itunes_episode}-title`}
       className="py-10 sm:py-12"
     >
       <Container>
         <div className="flex flex-col items-start">
           <h2
-            id={`episode-${episode.id}-title`}
+            id={`episode-${episode.itunes_episode}-title`}
             className="mt-2 text-lg font-bold text-slate-900"
           >
-            <Link href={`/${episode.id}`}>
+            <Link href={`/podcast/${episode.itunes_episode}`}>
               <a>{episode.title}</a>
             </Link>
           </h2>
@@ -79,9 +81,9 @@ function EpisodeEntry({ episode }) {
               day: "numeric",
             }).format(date)}
           </time>
-          <p className="mt-1 text-base leading-7 text-slate-700">
-            {episode.description}
-          </p>
+
+          <Description episode={episode} />
+
           <div className="mt-4 flex items-center gap-4">
             <button
               type="button"
@@ -119,7 +121,7 @@ function EpisodeEntry({ episode }) {
             >
               /
             </span>
-            <Link href={`/${episode.id}`}>
+            <Link href={`/podcast/${episode.itunes_episode}`}>
               <a className="flex items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900">
                 Show notes
               </a>
@@ -132,14 +134,15 @@ function EpisodeEntry({ episode }) {
 }
 
 export async function getStaticProps() {
-  const feed = await parse("https://their-side-feed.vercel.app/api/feed")
+  const feed = await parse("https://feeds.buzzsprout.com/2007004.rss")
+  console.log(feed)
 
   return {
     props: {
       episodes: feed.items.map(
-        ({ id, title, description, enclosures, published }) => ({
-          id,
-          title: `${id}: ${title}`,
+        ({ itunes_episode, title, description, enclosures, published }) => ({
+          itunes_episode,
+          title: `${itunes_episode}: ${title}`,
           published,
           description,
           audio: enclosures.map((enclosure) => ({
