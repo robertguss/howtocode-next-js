@@ -7,6 +7,7 @@ import { parse } from "rss-to-json"
 import { useAudioPlayer } from "@/components/Podcast/AudioProvider"
 import { Container } from "@/components/Podcast/Container"
 import { Layout } from "@/components/Podcast/Layout"
+import Header from "@/components/Header"
 
 const Description = dynamic(() => import("@/components/Podcast/Description"), {
   ssr: false,
@@ -20,7 +21,7 @@ export default function Home({ episodes }) {
           <title>Podcast | How To Code</title>
           <meta
             name="description"
-            content="The How to Code podcast exists for aspiring web developers seeking their first tech jobs. Host Robert Guss is a self-taught front-end developer..."
+            content="A podcast for aspiring web developers."
           />
         </Head>
         <div className="podcast-index-page pt-16 pb-12 sm:pb-4 lg:pt-12">
