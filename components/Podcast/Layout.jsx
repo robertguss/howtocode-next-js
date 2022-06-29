@@ -5,7 +5,7 @@ import clsx from "clsx"
 
 import { AudioPlayer } from "@/components/Podcast/player/AudioPlayer"
 import { HomeIcon } from '@heroicons/react/solid'
-import posterImage from "@/public/images/podcast/podcast-cover.jpg"
+import posterImage from "@/public/images/podcast/podcast-cover.png"
 
 function random(length, min, max, seed = 1) {
   return Array.from({ length }).map(() => {
