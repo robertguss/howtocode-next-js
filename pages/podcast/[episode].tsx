@@ -12,6 +12,8 @@ import { Layout } from "@/components/Podcast/Layout"
 import { useAudioPlayer } from "@/components/Podcast/AudioProvider"
 import { Container } from "@/components/Podcast/Container"
 import { PlayButton } from "@/components/Podcast/player/PlayButton"
+import Header from "@/components/Header"
+import Footer from "@/components/Footer/Footer"
 
 const Description = dynamic(() => import("@/components/Podcast/Description"), {
   ssr: false,
@@ -19,7 +21,7 @@ const Description = dynamic(() => import("@/components/Podcast/Description"), {
 
 import { PODCASTS_PATH, allPodcastsFilePaths } from "../../utils/mdxUtils"
 
-export default function Episode({ episode, showNotes }) {
+export default function PodcastEpisode({ episode, showNotes }) {
   let date = new Date(episode.published)
 
   let audioPlayerData = useMemo(
@@ -42,6 +44,7 @@ export default function Episode({ episode, showNotes }) {
           {/* <title>{episode.title} - How to Code: Web Development Podcast</title> */}
           <meta name="description" content={episode.description} />
         </Head>
+        <Header />
         <article className="podcast-episode-page py-16 lg:py-36">
           {/*
             // @ts-ignore */}
@@ -85,6 +88,7 @@ export default function Episode({ episode, showNotes }) {
             </div>
           </Container>
         </article>
+        <Footer />
       </Layout>
     </>
   )

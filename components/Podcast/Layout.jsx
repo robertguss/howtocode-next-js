@@ -2,8 +2,6 @@ import { useId, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import clsx from "clsx"
-import Header from "@/components/Header"
-import Footer from "@/components/Footer/Footer"
 
 import { AudioPlayer } from "@/components/Podcast/player/AudioPlayer"
 import posterImage from "@/public/images/podcast/podcast-cover.jpg"
@@ -111,7 +109,6 @@ function AboutSection(props) {
 export function Layout({ children }) {
   return (
     <>
-      <Header />
       <div className="podcast-left-sidebar bg-slate-50 lg:fixed lg:inset-y-0 lg:left-0 lg:flex lg:w-112 lg:items-start lg:overflow-y-auto xl:w-120">
         <div className="hidden lg:sticky lg:top-0 lg:flex lg:w-16 lg:flex-none lg:items-center lg:whitespace-nowrap lg:py-12 lg:text-sm lg:leading-7 lg:[writing-mode:vertical-rl]">
           <span className="font-mono text-slate-500">Hosted by</span>

@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function Header() {
   return (
-    <header className="bg-blue-600">
+    <header className="relative bg-blue-600">
       <nav
         className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
         aria-label="Top"
