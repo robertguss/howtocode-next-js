@@ -12,8 +12,7 @@ import { Layout } from "@/components/Podcast/Layout"
 import { useAudioPlayer } from "@/components/Podcast/AudioProvider"
 import { Container } from "@/components/Podcast/Container"
 import { PlayButton } from "@/components/Podcast/player/PlayButton"
-import Header from "@/components/Header"
-import Footer from "@/components/Footer/Footer"
+
 
 const Description = dynamic(() => import("@/components/Podcast/Description"), {
   ssr: false,
@@ -44,7 +43,6 @@ export default function PodcastEpisode({ episode, showNotes }) {
           {/* <title>{episode.title} - How to Code: Web Development Podcast</title> */}
           <meta name="description" content={episode.description} />
         </Head>
-        <Header />
         <article className="podcast-episode-page py-16 lg:py-36">
           {/*
             // @ts-ignore */}
@@ -69,16 +67,8 @@ export default function PodcastEpisode({ episode, showNotes }) {
                 </div>
               </div>
               <Description episode={episode} />
-              {/* <p className="ml-24 mt-3 text-lg font-medium leading-8 text-slate-700">
-                {episode.description}
-              </p> */}
             </header>
             <hr className="my-12 border-gray-200" />
-            {/* <div
-              className="[&>h2]:mt-12 [&>h2]:flex [&>h2]:items-center [&>h2]:font-mono [&>h2]:text-sm [&>h2]:font-medium [&>h2]:leading-7 [&>h2]:text-slate-900 [&>h2]:before:mr-3 [&>h2]:before:h-3 [&>h2]:before:w-1.5 [&>h2]:before:rounded-r-full [&>h2]:before:bg-cyan-200 [&>ul]:mt-6 [&>ul]:list-['\2013\20'] [&>ul]:pl-5 [&>h2:nth-of-type(3n+2)]:before:bg-indigo-200 [&>h2:nth-of-type(3n)]:before:bg-violet-200 prose prose-slate mt-14"
-              dangerouslySetInnerHTML={{ __html: episode.content }}
-            /> */}
-
             <div className="relative overflow-hidden bg-white">
               <div className="relative px-4 sm:px-6 lg:px-8">
                 <div className="prose prose-lg prose-indigo mx-auto text-gray-500">
@@ -88,7 +78,6 @@ export default function PodcastEpisode({ episode, showNotes }) {
             </div>
           </Container>
         </article>
-        <Footer />
       </Layout>
     </>
   )
@@ -97,7 +86,7 @@ export default function PodcastEpisode({ episode, showNotes }) {
 export async function getStaticProps({ params }) {
   const podcastsFilePath = path.join(PODCASTS_PATH, `${params.episode}.md`)
   const source = fs.readFileSync(podcastsFilePath)
-  const { content, data } = matter(source)
+  const { content } = matter(source)
   const mdxSource = await serialize(content)
 
   // @ts-ignore

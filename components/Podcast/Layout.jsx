@@ -4,8 +4,6 @@ import Link from "next/link"
 import clsx from "clsx"
 
 import { AudioPlayer } from "@/components/Podcast/player/AudioPlayer"
-import Header from "@/components/Header"
-import Footer from "@/components/Footer/Footer"
 
 import posterImage from "@/public/images/podcast/podcast-cover.jpg"
 
@@ -90,8 +88,7 @@ function AboutSection(props) {
           "lg:line-clamp-4": !isExpanded,
         })}
       >
-        The How to Code podcast exists for aspiring web developers seeking their
-        first tech jobs. Host Robert Guss is a self-taught front-end developer
+        Host Robert Guss is a self-taught front-end developer
         currently working as a Developer Experience Engineer at Cypress.io. We
         discuss learning how to code, strategies for getting your first job, web
         technology news, interviews, testing, and more on this show.
@@ -204,20 +201,6 @@ export function Layout({ children }) {
                   </a>
                 </Link>
               </li>
-              {/* <li className="flex">
-                <Link href="/">
-                  <a className="group flex items-center">
-                    <svg
-                      aria-hidden="true"
-                      className="h-8 w-8 fill-slate-400 group-hover:fill-slate-600"
-                    >
-                      <path d="M16 28.8A12.77 12.77 0 0 1 3.2 16 12.77 12.77 0 0 1 16 3.2 12.77 12.77 0 0 1 28.8 16 12.77 12.77 0 0 1 16 28.8Zm0-5.067.96-.96-.96-3.68-.96 3.68.96.96Zm-1.226-.054-.48 1.814 1.12-1.12-.64-.694Zm2.453 0-.64.64 1.12 1.12-.48-1.76Zm.907 3.307L16 24.853l-2.133 2.133c.693.107 1.387.213 2.133.213.747 0 1.44-.053 2.134-.213ZM16 4.799C9.814 4.8 4.8 9.813 4.8 16c0 4.907 3.147 9.067 7.52 10.56l2.4-8.906c-.533-.374-.853-1.014-.853-1.707A2.14 2.14 0 0 1 16 13.813a2.14 2.14 0 0 1 2.134 2.133c0 .693-.32 1.28-.854 1.707l2.4 8.906A11.145 11.145 0 0 0 27.2 16c0-6.186-5.013-11.2-11.2-11.2Zm7.307 16.747c-.267.32-.747.427-1.12.16-.373-.267-.427-.747-.16-1.067 0 0 1.44-1.92 1.44-4.64 0-2.72-1.44-4.64-1.44-4.64-.267-.32-.213-.8.16-1.066.373-.267.853-.16 1.12.16.107.106 1.76 2.293 1.76 5.546 0 3.254-1.653 5.44-1.76 5.547Zm-3.893-2.08c-.32-.32-.267-.907.053-1.227 0 0 .8-.853.8-2.24 0-1.386-.8-2.186-.8-2.24-.32-.32-.32-.853-.053-1.226.32-.374.8-.374 1.12-.054.053.054 1.333 1.387 1.333 3.52 0 2.134-1.28 3.467-1.333 3.52-.32.32-.8.267-1.12-.053Zm-6.827 0c-.32.32-.8.373-1.12.053-.053-.106-1.333-1.386-1.333-3.52 0-2.133 1.28-3.413 1.333-3.52.32-.32.853-.32 1.12.054.32.32.267.906-.053 1.226 0 .054-.8.854-.8 2.24 0 1.387.8 2.24.8 2.24.32.32.373.854.053 1.227Zm-2.773 2.24c-.374.267-.854.16-1.12-.16-.107-.107-1.76-2.293-1.76-5.547 0-3.253 1.653-5.44 1.76-5.546.266-.32.746-.427 1.12-.16.373.266.426.746.16 1.066 0 0-1.44 1.92-1.44 4.64 0 2.72 1.44 4.64 1.44 4.64.266.32.16.8-.16 1.067Z" />
-                    </svg>
-                    <span className="sr-only sm:hidden">Overcast</span>
-                    <span className="hidden sm:ml-3 sm:block">Overcast</span>
-                  </a>
-                </Link>
-              </li> */}
               <li className="flex">
                 <Link href="https://feeds.buzzsprout.com/2007004.rss">
                   <a className="group flex items-center">
@@ -248,7 +231,8 @@ export function Layout({ children }) {
           </section>
         </div>
       </div>
-      <div className="border-t border-slate-200 lg:relative lg:ml-112 lg:mb-28 lg:border-t-0 xl:ml-120">
+
+      <div className="podcast-right-content border-t border-slate-200 lg:relative lg:ml-112 lg:mb-28 lg:border-t-0 xl:ml-120">
         <Waveform />
         <div className="relative">{children}</div>
       </div>

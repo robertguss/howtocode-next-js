@@ -7,8 +7,7 @@ import { parse } from "rss-to-json"
 import { useAudioPlayer } from "@/components/Podcast/AudioProvider"
 import { Container } from "@/components/Podcast/Container"
 import { Layout } from "@/components/Podcast/Layout"
-import Header from "@/components/Header"
-import Footer from "@/components/Footer/Footer"
+
 
 const Description = dynamic(() => import("@/components/Podcast/Description"), {
   ssr: false,
