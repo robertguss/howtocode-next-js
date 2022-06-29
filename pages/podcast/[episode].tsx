@@ -42,7 +42,7 @@ export default function Episode({ episode, showNotes }) {
           {/* <title>{episode.title} - How to Code: Web Development Podcast</title> */}
           <meta name="description" content={episode.description} />
         </Head>
-        <article className="py-16 lg:py-36">
+        <article className="podcast-episode-page py-16 lg:py-36">
           {/*
             // @ts-ignore */}
           <Container>

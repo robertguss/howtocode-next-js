@@ -23,7 +23,7 @@ export default function Home({ episodes }) {
             content="The How to Code podcast exists for aspiring web developers seeking their first tech jobs. Host Robert Guss is a self-taught front-end developer..."
           />
         </Head>
-        <div className="pt-16 pb-12 sm:pb-4 lg:pt-12">
+        <div className="podcast-index-page pt-16 pb-12 sm:pb-4 lg:pt-12">
           {/*
             // @ts-ignore */}
           <Container>
