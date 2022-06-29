@@ -256,6 +256,11 @@
   margin-right: 10px;
 }
 
+.podcast-index-page svg {
+  height: 10px;
+  width: 10px;
+}
+
 .podcast-episode-description a {
   @apply text-pink-500
 }
