@@ -6,11 +6,17 @@ import fs from "fs"
 import matter from "gray-matter"
 
 export const POSTS_PATH = path.join(process.cwd(), "posts/")
+export const PODCASTS_PATH = path.join(process.cwd(), "podcasts/")
 
 export const allContentFilePaths = glob
   .sync("posts/*")
   .filter((path) => /\.md?$/.test(path))
   .map((path) => path.replace(/^posts/, ""))
+
+export const allPodcastsFilePaths = glob
+  .sync("podcasts/*")
+  .filter((path) => /\.md?$/.test(path))
+  .map((path) => path.replace(/^podcasts/, ""))
 
 export const getToCForMarkdown = (markdown) => toc(markdown).json
 

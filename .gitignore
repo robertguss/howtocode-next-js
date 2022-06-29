@@ -40,4 +40,5 @@ cypress/screenshots
 
 public/robots.txt
 public/sitemap.xml
+public/sitemap-0.xml
 public/search-index.json

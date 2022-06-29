@@ -4,8 +4,10 @@ const navigation = {
   main: [
     { name: "Free Books", href: "/books" },
     { name: "Articles", href: "/posts" },
+    { name: "Podcast", href: "/podcast" },
     { name: "Courses", href: "/courses" },
     { name: "Tutorials", href: "/tutorials" },
+    { name: "Newsletter", href: "/newsletter" },
   ],
   social: [
     {

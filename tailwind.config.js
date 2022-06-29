@@ -54,6 +54,7 @@ module.exports = {
       12: "3rem",
       14: "3.5rem",
       16: "4rem",
+      18: "4.5rem",
       20: "5rem",
       22: "5.5rem",
       24: "6rem",
@@ -79,7 +80,9 @@ module.exports = {
       96: "24rem",
       104: "26rem",
       110: "28rem",
+      112: "28rem",
       118: "30rem",
+      120: "30rem",
       126: "32rem",
       132: "34rem",
       140: "36rem",
@@ -116,5 +119,6 @@ module.exports = {
     require("@tailwindcss/forms"),
     // https://github.com/tailwindlabs/tailwindcss-typography
     require("@tailwindcss/typography"),
+    require("@tailwindcss/line-clamp"),
   ],
 }

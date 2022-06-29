@@ -1,9 +1,11 @@
 import { AppProps } from "next/app"
 import "tailwindcss/tailwind.css"
 import "../styles/global.css"
+import "focus-visible"
 import * as ga from "@/utils/ga"
 import { useEffect } from "react"
 import { useRouter } from "next/router"
+import { AudioProvider } from "@/components/Podcast/AudioProvider"
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
@@ -23,7 +25,11 @@ function MyApp({ Component, pageProps }: AppProps) {
     }
   }, [router.events])
 
-  return <Component {...pageProps} />
+  return (
+    <AudioProvider>
+      <Component {...pageProps} />
+    </AudioProvider>
+  )
 }
 
 export default MyApp

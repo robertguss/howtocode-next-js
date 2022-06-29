@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function Header() {
   return (
-    <header className="bg-blue-600">
+    <header className="relative bg-blue-600">
       <nav
         className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
         aria-label="Top"
@@ -48,6 +48,16 @@ export default function Header() {
                   data-test="link-articles"
                 >
                   Articles
+                </a>
+              </Link>
+
+              <Link href="/podcast">
+                <a
+                  className="text-base font-medium text-white hover:text-indigo-50"
+                  key="Articles"
+                  data-test="link-articles"
+                >
+                  Podcast
                 </a>
               </Link>
 
@@ -122,6 +132,15 @@ export default function Header() {
               key="Pricing"
             >
               Articles
+            </a>
+          </Link>
+
+          <Link href="/podcast">
+            <a
+              className="text-base font-medium text-white hover:text-indigo-50"
+              key="Pricing"
+            >
+              Podcast
             </a>
           </Link>
 
