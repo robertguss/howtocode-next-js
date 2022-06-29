@@ -256,7 +256,6 @@
   margin-right: 10px;
 }
 
-.podcast-index-page a {
-
+.podcast-episode-description a {
+  @apply text-pink-500
 }
-/* .podcast-episode-page  */
