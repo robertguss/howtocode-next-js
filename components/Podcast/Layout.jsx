@@ -4,7 +4,7 @@ import Link from "next/link"
 import clsx from "clsx"
 
 import { AudioPlayer } from "@/components/Podcast/player/AudioPlayer"
-
+import { HomeIcon } from '@heroicons/react/solid'
 import posterImage from "@/public/images/podcast/podcast-cover.jpg"
 
 function random(length, min, max, seed = 1) {
@@ -117,6 +117,14 @@ export function Layout({ children }) {
           </span>
         </div>
         <div className="relative z-10 mx-auto px-4 pb-4 pt-10 sm:px-6 md:max-w-2xl md:px-4 lg:min-h-full lg:flex-auto lg:border-x lg:border-slate-200 lg:py-12 lg:px-8 xl:px-12">
+
+          <Link href="/">
+            <a className="mb-6 text-pink-500 flex justify-center lg:justify-start">
+              <HomeIcon className="flex-shrink-0 h-5 w-5" aria-hidden="true" />
+              Home
+            </a>
+          </Link>
+
           <Link href="/podcast">
             <a
               className="relative mx-auto block w-48 overflow-hidden rounded-lg bg-slate-200 shadow-xl shadow-slate-200 sm:w-64 sm:rounded-xl lg:w-auto lg:rounded-2xl"
