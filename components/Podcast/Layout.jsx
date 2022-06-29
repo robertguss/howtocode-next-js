@@ -4,6 +4,9 @@ import Link from "next/link"
 import clsx from "clsx"
 
 import { AudioPlayer } from "@/components/Podcast/player/AudioPlayer"
+import Header from "@/components/Header"
+import Footer from "@/components/Footer/Footer"
+
 import posterImage from "@/public/images/podcast/podcast-cover.jpg"
 
 function random(length, min, max, seed = 1) {
@@ -263,10 +266,9 @@ export function Layout({ children }) {
             <span className="ml-2.5">Hosted by</span>
           </h2>
           <div className="mt-2 flex text-sm font-bold leading-7 text-slate-900">
-            <span className="after:ml-6 after:text-slate-400 after:content-['/']">
-              Norm MacDonald
+            <span className="after:ml-6 after:text-slate-400">
+              Robert Guss
             </span>
-            <span className="ml-6">Bob Saget</span>
           </div>
         </div>
       </div>

@@ -25,7 +25,7 @@ export default function PodcastHome({ episodes }) {
             content="A podcast for aspiring web developers."
           />
         </Head>
-        <Header />
+        {/* <Header /> */}
         <div className="podcast-index-page pt-16 pb-12 sm:pb-4 lg:pt-12">
           {/*
             // @ts-ignore */}
@@ -40,7 +40,7 @@ export default function PodcastHome({ episodes }) {
             ))}
           </div>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </Layout>
     </>
   )
