@@ -12,7 +12,7 @@ describe("Search", () => {
   //   cy.getBySel("search-input").type("Go")
   //   cy.get("#searchResults").should("be.visible")
   //   cy.get(".searchResultPage")
-  //     .its(0)
+  //     .eq(0)
   //     .within(() => {
   //       cy.get(".searchResultTitle").contains("Go")
   //     })

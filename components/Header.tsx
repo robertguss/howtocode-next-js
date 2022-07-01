@@ -55,7 +55,7 @@ export default function Header() {
                 <a
                   className="text-base font-medium text-white hover:text-indigo-50"
                   key="Articles"
-                  data-test="link-articles"
+                  data-test="link-podcast"
                 >
                   Podcast
                 </a>

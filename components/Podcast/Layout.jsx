@@ -4,7 +4,7 @@ import Link from "next/link"
 import clsx from "clsx"
 
 import { AudioPlayer } from "@/components/Podcast/player/AudioPlayer"
-import { HomeIcon } from '@heroicons/react/solid'
+import { HomeIcon } from "@heroicons/react/solid"
 import posterImage from "@/public/images/podcast/podcast-cover.png"
 
 function random(length, min, max, seed = 1) {
@@ -88,10 +88,10 @@ function AboutSection(props) {
           "lg:line-clamp-4": !isExpanded,
         })}
       >
-        Host Robert Guss is a self-taught front-end developer
-        currently working as a Developer Experience Engineer at Cypress.io. We
-        discuss learning how to code, strategies for getting your first job, web
-        technology news, interviews, testing, and more on this show.
+        Host Robert Guss is a self-taught front-end developer currently working
+        as a Developer Experience Engineer at Cypress.io. We discuss learning
+        how to code, strategies for getting your first job, web technology news,
+        interviews, testing, and more on this show.
       </p>
       {!isExpanded && (
         <button
@@ -117,10 +117,9 @@ export function Layout({ children }) {
           </span>
         </div>
         <div className="relative z-10 mx-auto px-4 pb-4 pt-10 sm:px-6 md:max-w-2xl md:px-4 lg:min-h-full lg:flex-auto lg:border-x lg:border-slate-200 lg:py-12 lg:px-8 xl:px-12">
-
           <Link href="/">
-            <a className="mb-6 text-pink-500 flex justify-center lg:justify-start">
-              <HomeIcon className="flex-shrink-0 h-5 w-5" aria-hidden="true" />
+            <a className="mb-6 flex justify-center text-pink-500 lg:justify-start">
+              <HomeIcon className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
               Home
             </a>
           </Link>
@@ -258,9 +257,7 @@ export function Layout({ children }) {
             <span className="ml-2.5">Hosted by</span>
           </h2>
           <div className="mt-2 flex text-sm font-bold leading-7 text-slate-900">
-            <span className="after:ml-6 after:text-slate-400">
-              Robert Guss
-            </span>
+            <span className="after:ml-6 after:text-slate-400">Robert Guss</span>
           </div>
         </div>
       </div>
