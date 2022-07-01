@@ -1,3 +1,5 @@
+import slugify from "slugify"
+
 import Squiggle from "./Squiggle"
 
 const navigation = {
@@ -114,7 +116,7 @@ export default function Footer() {
   return (
     <>
       <hr />
-      <footer className="bg-white">
+      <footer className="bg-white" data-test="footer">
         <div className="mx-auto max-w-7xl overflow-hidden py-12 px-4 sm:px-6 lg:px-8">
           <nav
             className="-mx-5 -my-2 flex flex-wrap justify-center"
@@ -125,6 +127,9 @@ export default function Footer() {
                 <a
                   href={item.href}
                   className="text-base text-gray-500 hover:text-gray-900"
+                  data-test={`footer-link-${slugify(item.name, {
+                    lower: true,
+                  })}`}
                 >
                   {item.name}
                 </a>

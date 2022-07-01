@@ -1,53 +1,53 @@
-describe("Navigation", () => {
+describe("Footer", () => {
   beforeEach(() => {
     cy.visit("/")
   })
 
   it("The Free Books link goes to the /books page", () => {
-    cy.getBySel("navigation").within(() => {
-      cy.getBySel("link-free-books").click()
+    cy.getBySel("footer").within(() => {
+      cy.getBySel("footer-link-free-books").click()
     })
 
     cy.location("pathname").should("equal", "/books")
   })
 
   it("The Articles link goes to the /posts page", () => {
-    cy.getBySel("navigation").within(() => {
-      cy.getBySel("link-articles").click()
+    cy.getBySel("footer").within(() => {
+      cy.getBySel("footer-link-articles").click()
     })
 
     cy.location("pathname").should("equal", "/posts")
   })
 
   it("The Podcast link goes to the /podcasts page", () => {
-    cy.getBySel("navigation").within(() => {
-      cy.getBySel("link-podcast").click()
+    cy.getBySel("footer").within(() => {
+      cy.getBySel("footer-link-podcast").click()
     })
 
     cy.location("pathname").should("equal", "/podcast")
   })
 
   it("The Courses link goes to the /courses page", () => {
-    cy.getBySel("navigation").within(() => {
-      cy.getBySel("link-courses").click()
+    cy.getBySel("footer").within(() => {
+      cy.getBySel("footer-link-courses").click()
     })
 
     cy.location("pathname").should("equal", "/courses")
   })
 
   it("The Tutorials link goes to the /tutorials page", () => {
-    cy.getBySel("navigation").within(() => {
-      cy.getBySel("link-tutorials").click()
+    cy.getBySel("footer").within(() => {
+      cy.getBySel("footer-link-tutorials").click()
     })
 
     cy.location("pathname").should("equal", "/tutorials")
   })
 
-  it("The Search link goes to the /search page", () => {
-    cy.getBySel("navigation").within(() => {
-      cy.getBySel("link-search").click()
+  it("The Newsletter link goes to the /newsletter page", () => {
+    cy.getBySel("footer").within(() => {
+      cy.getBySel("footer-link-newsletter").click()
     })
 
-    cy.location("pathname").should("equal", "/search")
+    cy.location("pathname").should("equal", "/newsletter")
   })
 })
