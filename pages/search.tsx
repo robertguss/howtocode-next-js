@@ -9,7 +9,7 @@ let pageDescription = "Search all Articles"
 let seoTitle = "Search | How To Code"
 let seoDescription = "Search through all articles on How To Code"
 
-export default function Books() {
+export default function Search() {
   return (
     <Layout>
       <Head>

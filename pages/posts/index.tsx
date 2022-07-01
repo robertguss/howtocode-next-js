@@ -11,7 +11,7 @@ let seoTitle = "Articles | How To Code"
 let seoDescription =
   "How to Code is a blog for web developers that focuses on teaching web development through articles, books, courses and tutorials."
 
-export default function Home({ allPosts }) {
+export default function Articles({ allPosts }) {
   return (
     <>
       <Head>
@@ -28,6 +28,8 @@ export default function Home({ allPosts }) {
             className="grid grid-cols-1 gap-6 py-8 md:grid-cols-2 lg:grid-cols-3"
             data-test="articles-section"
           >
+            <h2>hi</h2>
+
             {allPosts.map((post, index) => (
               <div className="col-span-1" key={index}>
                 <PreviewCard post={post} />
