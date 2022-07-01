@@ -42,12 +42,4 @@ describe("Navigation", () => {
 
     cy.location("pathname").should("equal", "/tutorials")
   })
-
-  it("The Search link goes to the /search page", () => {
-    cy.getBySel("navigation").within(() => {
-      cy.getBySel("link-search").click()
-    })
-
-    cy.location("pathname").should("equal", "/search")
-  })
 })
