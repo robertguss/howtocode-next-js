@@ -8,7 +8,6 @@ import { useAudioPlayer } from "@/components/Podcast/AudioProvider"
 import { Container } from "@/components/Podcast/Container"
 import { Layout } from "@/components/Podcast/Layout"
 
-
 const Description = dynamic(() => import("@/components/Podcast/Description"), {
   ssr: false,
 })
@@ -96,6 +95,7 @@ function EpisodeEntry({ episode }) {
               type="button"
               onClick={() => player.toggle()}
               className="flex items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900"
+              data-test={`podcast-listen-to-episode-${episode.itunes_episode}-button`}
             >
               <span className="sr-only">
                 {player.playing ? "Pause" : "Play"}
@@ -129,7 +129,10 @@ function EpisodeEntry({ episode }) {
               /
             </span>
             <Link href={`/podcast/${episode.itunes_episode}`}>
-              <a className="flex items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900">
+              <a
+                className="flex items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900"
+                data-test={`episode-${episode.itunes_episode}-show-notes-link`}
+              >
                 Show notes
               </a>
             </Link>
