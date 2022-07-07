@@ -18,6 +18,9 @@ describe("Podcast", () => {
   it("the show notes button links to the correct episodes show notes", () => {
     cy.getBySel("episode-1-show-notes-link").click()
     cy.location("pathname").should("equal", "/podcast/1")
-    cy.get("h1").contains("1: Why this podcast?")
+
+    cy.visit("/podcast")
+    cy.getBySel("episode-2-show-notes-link").click()
+    cy.location("pathname").should("equal", "/podcast/2")
   })
 })
